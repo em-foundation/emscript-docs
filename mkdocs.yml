@@ -1,0 +1,190 @@
+site_name: Zig&bull;EM Programming Framework
+copyright: Copyright &copy; 2023 &ndash; The EM Foundation
+extra_css: [extra.css]
+extra_javascript: [extra.js]
+
+theme:
+  name: material
+  favicon: assets/favicon.png
+  features:
+    #    - navigation.expand
+    #    - navigation.footer
+    - navigation.indexes
+    #    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+  #    - navigation.tracking
+  font:
+    text: Quicksand
+  icon:
+    annotation: material/chevron-right-circle
+  logo: assets/logo12.png
+  palette:
+    accent: light blue
+    scheme: slate
+    primary: custom
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.caret
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      ##      auto_title: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+
+plugins:
+  - blog:
+     archive: true
+     blog_dir: blog
+     post_date_format: long
+     post_url_format: "{file}"
+  - emdown
+  - glightbox
+  - open-in-new-tab
+  - search
+
+extra:
+  analytics:
+    provider: google
+    property: G-DX6RZ0VNPT
+
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/the-em-foundation/about/?viewAsMember=true
+    - icon: fontawesome/brands/github
+      link: https://github.com/em-foundation
+
+nav:
+  - Home: 
+    - home/index.md
+  - Setup:
+    - setup/index.md
+  - Tutorials:
+    - tutorials/index.md
+    - "Touring the Zig•EM codescape": tutorials/tutorial-01.md
+    - "Basic Zig•EM examples": tutorials/tutorial-02.md
+    - "Real-time debug with Zig•EM": tutorials/tutorial-03.md
+  - Articles:
+    - articles/index.md
+  - Blog: 
+      - blog/index.md
+  - Packages:
+    - shelf/index.md
+#==<em.core>
+    - em.core:
+      - shelf/em.core/index.md
+      - em.arch.arm:
+        - shelf/em.core/em.arch.arm/index.md
+        - GlobalInterrupts: shelf/em.core/em.arch.arm/GlobalInterrupts.md
+        - IntrVec: shelf/em.core/em.arch.arm/IntrVec.md
+        - StartupC: shelf/em.core/em.arch.arm/StartupC.md
+        - UsCounterSystick: shelf/em.core/em.arch.arm/UsCounterSystick.md
+      - em.bench.coremark:
+        - shelf/em.core/em.bench.coremark/index.md
+        - ActiveRunnerP: shelf/em.core/em.bench.coremark/ActiveRunnerP.md
+        - BenchAlgI: shelf/em.core/em.bench.coremark/BenchAlgI.md
+        - CoreBench: shelf/em.core/em.bench.coremark/CoreBench.md
+        - Crc: shelf/em.core/em.bench.coremark/Crc.md
+        - ListBench: shelf/em.core/em.bench.coremark/ListBench.md
+        - MatrixBench: shelf/em.core/em.bench.coremark/MatrixBench.md
+        - SleepyRunnerP: shelf/em.core/em.bench.coremark/SleepyRunnerP.md
+        - StateBench: shelf/em.core/em.bench.coremark/StateBench.md
+        - Utils: shelf/em.core/em.bench.coremark/Utils.md
+      - em.examples.basic:
+        - shelf/em.core/em.examples.basic/index.md
+        - Ex00_EmptyP: shelf/em.core/em.examples.basic/Ex00_EmptyP.md
+        - Ex01_HelloP: shelf/em.core/em.examples.basic/Ex01_HelloP.md
+        - Ex02_BlinkerP: shelf/em.core/em.examples.basic/Ex02_BlinkerP.md
+        - Ex03_BlinkerDbgP: shelf/em.core/em.examples.basic/Ex03_BlinkerDbgP.md
+        - Ex04_FiberP: shelf/em.core/em.examples.basic/Ex04_FiberP.md
+        - Ex05_Button1P: shelf/em.core/em.examples.basic/Ex05_Button1P.md
+        - Ex06_Button2P: shelf/em.core/em.examples.basic/Ex06_Button2P.md
+        - Ex07_Button3P: shelf/em.core/em.examples.basic/Ex07_Button3P.md
+        - Ex08_OneShot1P: shelf/em.core/em.examples.basic/Ex08_OneShot1P.md
+        - Ex09_OneShot2P: shelf/em.core/em.examples.basic/Ex09_OneShot2P.md
+        - Ex10_PollerP: shelf/em.core/em.examples.basic/Ex10_PollerP.md
+        - Ex11_Alarm1P: shelf/em.core/em.examples.basic/Ex11_Alarm1P.md
+        - Ex12_Alarm2P: shelf/em.core/em.examples.basic/Ex12_Alarm2P.md
+        - Ex13_TickerP: shelf/em.core/em.examples.basic/Ex13_TickerP.md
+      - em.examples.combo:
+        - shelf/em.core/em.examples.combo/index.md
+        - Ex01_TickerP: shelf/em.core/em.examples.combo/Ex01_TickerP.md
+      - em.hal:
+        - shelf/em.core/em.hal/index.md
+        - BusyWaitI: shelf/em.core/em.hal/BusyWaitI.md
+        - ButtonI: shelf/em.core/em.hal/ButtonI.md
+        - ConsoleUartI: shelf/em.core/em.hal/ConsoleUartI.md
+        - EdgeI: shelf/em.core/em.hal/EdgeI.md
+        - GlobalInterruptsI: shelf/em.core/em.hal/GlobalInterruptsI.md
+        - GpioI: shelf/em.core/em.hal/GpioI.md
+        - IdleI: shelf/em.core/em.hal/IdleI.md
+        - LedI: shelf/em.core/em.hal/LedI.md
+        - McuI: shelf/em.core/em.hal/McuI.md
+        - MsCounterI: shelf/em.core/em.hal/MsCounterI.md
+        - OneShotI: shelf/em.core/em.hal/OneShotI.md
+        - UptimerI: shelf/em.core/em.hal/UptimerI.md
+        - UsCounterI: shelf/em.core/em.hal/UsCounterI.md
+        - WakeupTimerI: shelf/em.core/em.hal/WakeupTimerI.md
+      - em.lang:
+        - shelf/em.core/em.lang/index.md
+        - BoardInfoC: shelf/em.core/em.lang/BoardInfoC.md
+        - Console: shelf/em.core/em.lang/Console.md
+        - Debug: shelf/em.core/em.lang/Debug.md
+      - em.mcu:
+        - shelf/em.core/em.mcu/index.md
+        - Common: shelf/em.core/em.mcu/Common.md
+        - Poller: shelf/em.core/em.mcu/Poller.md
+      - em.utils:
+        - shelf/em.core/em.utils/index.md
+        - AlarmMgr: shelf/em.core/em.utils/AlarmMgr.md
+        - BoardController: shelf/em.core/em.utils/BoardController.md
+        - ButtonT: shelf/em.core/em.utils/ButtonT.md
+        - FiberMgr: shelf/em.core/em.utils/FiberMgr.md
+        - LedT: shelf/em.core/em.utils/LedT.md
+        - SoftUart: shelf/em.core/em.utils/SoftUart.md
+        - TickerMgr: shelf/em.core/em.utils/TickerMgr.md
+        - TimeTypes: shelf/em.core/em.utils/TimeTypes.md
+
+#==<ti.cc23xx>
+    - ti.cc23xx:
+      - shelf/ti.cc23xx/index.md
+      - ti.distro.cc23xx:
+        - shelf/ti.cc23xx/ti.distro.cc23xx/index.md
+        - BoardC: shelf/ti.cc23xx/ti.distro.cc23xx/BoardC.md
+        - BuildC: shelf/ti.cc23xx/ti.distro.cc23xx/BuildC.md
+        - LinkerC: shelf/ti.cc23xx/ti.distro.cc23xx/LinkerC.md
+      - ti.mcu.cc23xx:
+        - shelf/ti.cc23xx/ti.mcu.cc23xx/index.md
+        - BusyWait: shelf/ti.cc23xx/ti.mcu.cc23xx/BusyWait.md
+        - BusyWaitUsCounter: shelf/ti.cc23xx/ti.mcu.cc23xx/BusyWaitUsCounter.md
+        - ConsoleUart0: shelf/ti.cc23xx/ti.mcu.cc23xx/ConsoleUart0.md
+        - EdgeAux: shelf/ti.cc23xx/ti.mcu.cc23xx/EdgeAux.md
+        - EdgeT: shelf/ti.cc23xx/ti.mcu.cc23xx/EdgeT.md
+        - ExtFlashDisabler: shelf/ti.cc23xx/ti.mcu.cc23xx/ExtFlashDisabler.md
+        - GpioT: shelf/ti.cc23xx/ti.mcu.cc23xx/GpioT.md
+        - Hapi: shelf/ti.cc23xx/ti.mcu.cc23xx/Hapi.md
+        - Idle: shelf/ti.cc23xx/ti.mcu.cc23xx/Idle.md
+        - Mcu: shelf/ti.cc23xx/ti.mcu.cc23xx/Mcu.md
+        - MsCounterGpt3: shelf/ti.cc23xx/ti.mcu.cc23xx/MsCounterGpt3.md
+        - OneShotGpt3: shelf/ti.cc23xx/ti.mcu.cc23xx/OneShotGpt3.md
+        - Rtc: shelf/ti.cc23xx/ti.mcu.cc23xx/Rtc.md
+        - UptimerRtc: shelf/ti.cc23xx/ti.mcu.cc23xx/UptimerRtc.md
+        - WakeupRtc: shelf/ti.cc23xx/ti.mcu.cc23xx/WakeupRtc.md

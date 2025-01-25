@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zigemlexer"
+version = "0.0.1"
+dependencies = ["Pygments"]
+
+[project.entry-points."pygments.lexers"]
+zigem = "zigemlexer.zigemlexer:ZigEmLexer"
