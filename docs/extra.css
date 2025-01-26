@@ -284,79 +284,79 @@ span.em-screen {
 
 /* syntax highlight */
 
-.language-zigem .c1 {
+.language-ems .c1 {
     color: #75ad5b;
     font-style: italic;
 }
 
-.language-zigem .k {
+.language-ems .k {
     color: hsl(280, 50%, 65%);
-    font-weight: 700;
+    font-weight: normal;
 }
 
-.language-zigem .kr {
+.language-ems .kr {
     color: #569CD6;
-    font-weight: 700;
+    font-weight: normal;
 }
 
-.language-zigem .kt {
+.language-ems .kt {
     color: #4EC9B0;
-    font-weight: 700;
+    font-weight: normal;
 }
 
-.language-zigem .n {
+.language-ems .n {
     color: #9cdcfe;
-    font-weight: 700;
+    font-weight: bold;
 }
 
-.language-zigem .nb {
+.language-ems .nb {
     color: #f99165;
-    font-weight: 700;
+    font-weight: normal;
 }
 
-.language-zigem .nc {
+.language-ems .nc {
     color: #4EC9B0;
-    font-weight: 700;
+    font-weight: bold;
 }
 
-.language-zigem .nf {
+.language-ems .nf {
     color: #DCDCAA;
-    font-weight: 700;
+    font-weight: bold;
 }
 
-.language-zigem .nn {
+.language-ems .nn {
     color: #53acf5;
-    font-weight: 700;
+    font-weight: bold;
 }
 
-.language-zigem .nt {
+.language-ems .nt {
     color: #bbffee;
-    font-weight: 700;
+    font-weight: normal;
 }
 
-.language-zigem .nx {
+.language-ems .nx {
     color: #ff4444;
-    font-weight: 700;
+    font-weight: bold;
 }
 
-.language-zigem .s {
+.language-ems .s {
     color: hsl(10, 70%, 60%);
 }
 
-.language-zigem .sd {
+.language-ems .sd {
     color: hsl(30, 10%, 40%);
     font-style: italic;
 }
 
-.language-zigem .se {
+.language-ems .se {
     color: hsl(24, 89%, 63%);
 }
 
-.language-zigem .sh {
+.language-ems .sh {
     color: hsl(30, 10%, 40%);
 }
 
-.language-zigem .si {
+.language-ems .si {
     color: hsl(39, 94%, 40%);
 }
 

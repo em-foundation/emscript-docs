@@ -1,5 +1,12 @@
 # Zig&bull;EM Programming Framework
 
+```ems
+function foo#f(x: MyInt#t) {
+    let y = <u8>10
+    if (x > 0) x = y
+}
+```
+
 Welcome to the world of **Zig&bull;EM** [_ˈzig.ɛm_&thinsp;] &ndash; a novel programming framework targeting resource-constrained embedded systems.&thinsp; To increase your understanding, this site documents all aspects of the **Zig&bull;EM** software platform.
 
 <!-- imagemapper.noc.io -->
