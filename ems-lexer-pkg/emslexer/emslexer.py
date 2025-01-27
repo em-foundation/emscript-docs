@@ -5,7 +5,7 @@ import sys
 def printf(fmt, *args):
     sys.stderr.write(fmt % args)
 
-ID = r'([A-Za-z_][A-Za-z0-9_]*)'
+ID = r'([A-Za-z_][A-Za-z0-9_$]*)'
 
 S = r'((")((\\")|[^"])*("))'
 
@@ -31,7 +31,7 @@ class EmsLexer(RegexLexer):
     def semantic_callback(lexer, match):
         name = match.group(1)
         suf = match.group(len(match.groups()))
-        tok = Name if suf == None else Name.Function if suf == '#f' else Keyword if suf == '#k' else Keyword.Type if suf == '#t' else Keyword.Type if suf == '@u' else Generic.Error
+        tok = Name if suf == None else Name.Function if suf == '#f' else Keyword if suf == '#k' else Keyword.Type if suf == '#t' else Keyword.Type if suf == '#u' else Generic.Error
         yield match.start(), tok, name
 
     def zigem_strip_callback(lexer, match):
@@ -51,18 +51,16 @@ class EmsLexer(RegexLexer):
             (r'em__C\b', Name.Builtin),
             (r'em\.(fail|halt|print)\b', Name.Other),
             (r'em\.[@]"%%[^"]+"', Name.Other),
-            (rf'(em{ID}\.{ID})([#][a-z])', zigem_strip_callback),
-            (rf'em{ID}?((\.{ID})|(\.[@]{S}))?\b', Name.Builtin),
             (rf'^pub[ ]const[ ]EM__{ID}\b', Name.Tag),
             ## (W_OTHERS, Name.Other),
             (W_KEYWORDS, Keyword),
             (W_RESERVED, Keyword.Reserved),
             (W_TYPES, Keyword.Type),
-            (rf'[@]{ID}\b', Name.Function),
+            (rf'(em)?[$]{ID}\b', Name.Builtin),
             (r'[iu]\d+', Keyword.Type),
             (rf'{ID}([#][a-z])?', semantic_callback),
             (rf'([@]{S})([#][a-z])?', semantic_callback),
-            (r"(')((\\.+)|[^'])*(')", String.Char),
+            (r"(')((\\.+)|[^'])*(')", String),
             (rf'{N_H}|{N_B}|{N_D}[.]{N_D}{N_E}?|{N_D}[LlUu]?', Other),
             (rf'{S}', String),
             (r'.', Other),

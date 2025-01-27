@@ -23,6 +23,8 @@ def replace_fxn(m):
         return f'<code class="language-em"><span class="nn">{txt}</span></code>'
     elif tag == 'cx':
         return f'<code><span class="x">{txt}</span></code>'
+    elif tag == 'es':
+        return f'<code class="language-ems highlight"><span class="{args[1]}">{txt}</span></code>'
     elif tag == 'fn':
         return f'<code><span class="filename">{txt}</span></code>'
     elif tag == 'hc':
@@ -53,8 +55,6 @@ def replace_fxn(m):
         return f'<span class="{args[1]}">{txt}</span>'
     elif tag == 'wn':
         return f'<span class="em-walk">:fontawesome-solid-person-walking-arrow-right:</span>'
-    elif tag == 'ze':
-        return f'<code class="language-zigem highlight"><span class="{args[1]}">{txt}</span></code>'
     else:
         sys.stderr.write("*** unknown tag: %s\n" % tag)
         return f'<span style="color:red">${m.group(0)}</span>'

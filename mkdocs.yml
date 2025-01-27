@@ -79,16 +79,13 @@ nav:
     - setup/index.md
   - Tutorials:
     - tutorials/index.md
-    - "Touring the Zig•EM codescape": tutorials/tutorial-01.md
-    - "Basic Zig•EM examples": tutorials/tutorial-02.md
-    - "Real-time debug with Zig•EM": tutorials/tutorial-03.md
   - Articles:
     - articles/index.md
   - Blog: 
       - blog/index.md
   - Packages:
     - shelf/index.md
-#==<em.core>
+#-- em.core
     - em.core:
       - shelf/em.core/index.md
       - em.arch.arm:
@@ -113,7 +110,7 @@ nav:
         - Ex00_EmptyP: shelf/em.core/em.examples.basic/Ex00_EmptyP.md
         - Ex01_HelloP: shelf/em.core/em.examples.basic/Ex01_HelloP.md
         - Ex02_BlinkerP: shelf/em.core/em.examples.basic/Ex02_BlinkerP.md
-        - Ex03_BlinkerDbgP: shelf/em.core/em.examples.basic/Ex03_BlinkerDbgP.md
+        - Ex03_DebugP: shelf/em.core/em.examples.basic/Ex03_DebugP.md
         - Ex04_FiberP: shelf/em.core/em.examples.basic/Ex04_FiberP.md
         - Ex05_Button1P: shelf/em.core/em.examples.basic/Ex05_Button1P.md
         - Ex06_Button2P: shelf/em.core/em.examples.basic/Ex06_Button2P.md
@@ -124,9 +121,6 @@ nav:
         - Ex11_Alarm1P: shelf/em.core/em.examples.basic/Ex11_Alarm1P.md
         - Ex12_Alarm2P: shelf/em.core/em.examples.basic/Ex12_Alarm2P.md
         - Ex13_TickerP: shelf/em.core/em.examples.basic/Ex13_TickerP.md
-      - em.examples.combo:
-        - shelf/em.core/em.examples.combo/index.md
-        - Ex01_TickerP: shelf/em.core/em.examples.combo/Ex01_TickerP.md
       - em.hal:
         - shelf/em.core/em.hal/index.md
         - BusyWaitI: shelf/em.core/em.hal/BusyWaitI.md
@@ -138,16 +132,14 @@ nav:
         - IdleI: shelf/em.core/em.hal/IdleI.md
         - LedI: shelf/em.core/em.hal/LedI.md
         - McuI: shelf/em.core/em.hal/McuI.md
-        - MsCounterI: shelf/em.core/em.hal/MsCounterI.md
         - OneShotI: shelf/em.core/em.hal/OneShotI.md
-        - UptimerI: shelf/em.core/em.hal/UptimerI.md
         - UsCounterI: shelf/em.core/em.hal/UsCounterI.md
         - WakeupTimerI: shelf/em.core/em.hal/WakeupTimerI.md
       - em.lang:
         - shelf/em.core/em.lang/index.md
-        - BoardInfoC: shelf/em.core/em.lang/BoardInfoC.md
         - Console: shelf/em.core/em.lang/Console.md
         - Debug: shelf/em.core/em.lang/Debug.md
+        - TargC: shelf/em.core/em.lang/TargC.md
       - em.mcu:
         - shelf/em.core/em.mcu/index.md
         - Common: shelf/em.core/em.mcu/Common.md
@@ -162,8 +154,7 @@ nav:
         - SoftUart: shelf/em.core/em.utils/SoftUart.md
         - TickerMgr: shelf/em.core/em.utils/TickerMgr.md
         - TimeTypes: shelf/em.core/em.utils/TimeTypes.md
-
-#==<ti.cc23xx>
+#-- ti.cc23xx
     - ti.cc23xx:
       - shelf/ti.cc23xx/index.md
       - ti.distro.cc23xx:
