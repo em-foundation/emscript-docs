@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 @import url('extra-base.css');
 
 :root {
@@ -133,7 +134,8 @@ div.md-tooltip__inner {
 }
 
 .md-typeset pre code {
-    font-size: 0.65rem;
+    font-size: 0.70rem;
+    font-family: 'Inconsolata', monospace !important;
 }
 
 .md-typeset td.linenos {
