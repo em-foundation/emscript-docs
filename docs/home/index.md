@@ -1,43 +1,7 @@
-# Zig&bull;EM Programming Framework
+# EM&bull;Script &mdash; EM&#8482; Reimagined 
 
-```ems
-import em from '@$$emscript'
-export const $U = em.$declare('MODULE')
 
-import * as Common from '@em.mcu/Common.em'
-import * as GpioI from '@em.hal/GpioI.em'
-
-export const TxPin = $proxy<GpioI.$I>()
-
-export function em$startup(): void {
-    TxPin.$$.makeOutput()
-    TxPin.$$.set()
-}
-
-export function flush(): void {
-}
-
-export function put(data: u8): void {
-    const bit_cnt = 10
-    const bit_time = 8
-    var tx_byte: u16 = (data << 1) | 0x600
-    const key = Common.GlobalInterrupts.$$.disable()
-    for (let i = 0; i < bit_cnt; i++) {
-        Common.UsCounter.$$.set(bit_time)
-        if (tx_byte & 0x1) {
-            TxPin.$$.set()
-        } else {
-            TxPin.$$.clear()
-        }
-        tx_byte >>= 1
-        Common.UsCounter.$$.spin()
-    }
-    TxPin.$$.set()
-    Common.GlobalInterrupts.$$.restore(key)
-}
-```
-
-Welcome to the world of **Zig&bull;EM** [_ˈzig.ɛm_&thinsp;] &ndash; a novel programming framework targeting resource-constrained embedded systems.&thinsp; To increase your understanding, this site documents all aspects of the **Zig&bull;EM** software platform.
+Welcome to the world of **EM&bull;Script** [_ˈɛm.script_&thinsp;] &ndash; a novel programming environment targeting resource-constrained embedded systems.&thinsp; To increase your understanding, this site documents all aspects of the **EM&bull;Script** software platform.
 
 <!-- imagemapper.noc.io -->
 
@@ -50,15 +14,81 @@ Welcome to the world of **Zig&bull;EM** [_ˈzig.ɛm_&thinsp;] &ndash; a novel pr
 </svg>
 </div>
 
-!!! question "1 &mdash; Why another language"
+!!! question "1 &mdash; Refresh my memory of EM&thinsp;..."
+
+Since its inception in 2010, the focus of the [EM Programming Language](https://docs.openem.org/) has remained constant &ndash; producing "tiny code for tiny chips" where every byte of memory and &mu;Joule of energy matters when deploying low-cost, low-power embedded systems.
+
+Having supported more than twenty 8/16/32-bit MCUs from a dozen silicon vendors, the EM language offers a _higher-level_ programming paradigm coupled with a _higher-level_ of runtime performance when compared with legacy C/C++ code targeting these MCUs. 
+
+!!! question "2 &mdash; So why did you create **EM&bull;Script**"
+
+!!! question "3 &mdash; What makes TypeScript a viable host"
+
+!!! question "4 &mdash; Show me some **EM&bull;Script** source code"
+
+```ems linenums="1" title="em.utils/SoftUart.em"
+import em from '@$$emscript'
+export const $U = em.$declare('MODULE')
+
+import * as Common#u from '@em.mcu/Common.em'
+import * as GpioI#u from '@em.hal/GpioI.em'
+
+export const baud_rate = $config<u32>(9_600)
+export const TxPin = $proxy<GpioI#u.$I>()
+
+const bit_time = $config<u16>()
+
+export namespace em$meta {
+    export function em$construct() {
+        bit_time.$$ = Math.floor(1_000_000 / baud_rate.$$)
+    }
+}
+
+export function em$startup(): void {
+    TxPin.$$.makeOutput#f()
+    TxPin.$$.set#f()
+}
+
+export function put#f(data: u8): void {
+    const bit_cnt = 10
+    var tx_byte: u16 = (data << 1) | 0x600
+    const key = Common#u.GlobalInterrupts.$$.disable#f()
+    for (let i = 0; i < bit_cnt; i++) {
+        Common#u.UsCounter.$$.set#f(bit_time.$$)
+        if (tx_byte & 0x1) {
+            TxPin.$$.set#f()
+        } else {
+            TxPin.$$.clear#f()
+        }
+        tx_byte >>= 1
+        Common#u.UsCounter.$$.spin#f()
+    }
+    TxPin.$$.set#f()
+    Common#u.GlobalInterrupts.$$.restore#f(key)
+}
+
+```
+
+!!! question "5 &mdash; How does **EM&bull;Script** optimize target firmware"
+
+!!! question "6 &mdash; Can I start working with the **EM&bull;Script** environment"
+
+!!! question "7 &mdash; Tell me more about the longer-term roadmap for **EM&bull;Script**"
+
+
+
+
+<!--
+
+!!! question "1 &mdash; Remind me about EM"
     To fill a void...&thinsp; While **C** remains the dominant programming language for 8&thinsp;/&thinsp;16&thinsp;/&thinsp;32-bit microcontrollers [MCUs] with limited memory and processing resources, we see opportunites for a _higher-level_ language which at the same time paves the way for _higher-levels_ of embedded system performance.
 
-!!! question "2 &mdash; Where does EM make its greatest impact"
+!!! question "2 &mdash; So why create **EM&bull;Script**"
     Quite simply, by reducing overall program size &ndash; a careabout for software developers working with resource-constrained MCUs.&thinsp; Reducing runtime memory requirements not only can improve program execution time, but can dramatically lower overall power consumption within the MCU as well.
 
     Though the EM language translator ultimately generates (portable) C/C++ code as output, a novel _configuration_ phase within the program build-flow serves as the "secret sauce" behind these performance improvements.
 
     A quick pass through&thinsp; [EM&thinsp;.&thinsp;optimize = WPO&thinsp;+&thinsp;ACO](//blog.openem.org/post-005/){ .em-link } &thinsp;should offer some more insights.
 
-
+-->
 

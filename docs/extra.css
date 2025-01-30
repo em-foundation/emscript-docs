@@ -139,7 +139,12 @@ div.md-tooltip__inner {
 }
 
 .md-typeset td.linenos {
-    font-size: 0.65rem;
+    font-size: 0.60rem;
+    font-family: 'Inconsolata', monospace !important;
+}
+
+.md-typeset td.linenos pre {
+    line-height: 1.69;
 }
 
 ul.md-meta__list {
@@ -317,7 +322,7 @@ span.em-screen {
 }
 
 .language-ems .nc {
-    color: #4EC9B0;
+    color: #d4efff;
     font-weight: bold;
 }
 

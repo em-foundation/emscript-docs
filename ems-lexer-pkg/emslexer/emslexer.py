@@ -51,6 +51,7 @@ class EmsLexer(RegexLexer):
             (r'em__C\b', Name.Builtin),
             (r'em\.(fail|halt|print)\b', Name.Other),
             (r'em\.[@]"%%[^"]+"', Name.Other),
+            (r'em\$(meta|template)\b', Name.Class),
             (rf'^pub[ ]const[ ]EM__{ID}\b', Name.Tag),
             ## (W_OTHERS, Name.Other),
             (W_KEYWORDS, Keyword),

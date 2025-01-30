@@ -1,4 +1,4 @@
-site_name: Zig&bull;EM Programming Framework
+site_name: EM&bull;Script
 copyright: Copyright &copy; 2023 &ndash; The EM Foundation
 extra_css: [extra.css]
 extra_javascript: [extra.js]
@@ -133,6 +133,7 @@ nav:
         - LedI: shelf/em.core/em.hal/LedI.md
         - McuI: shelf/em.core/em.hal/McuI.md
         - OneShotI: shelf/em.core/em.hal/OneShotI.md
+        - UptimerI: shelf/em.core/em.hal/UptimerI.md
         - UsCounterI: shelf/em.core/em.hal/UsCounterI.md
         - WakeupTimerI: shelf/em.core/em.hal/WakeupTimerI.md
       - em.lang:
