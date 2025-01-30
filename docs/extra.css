@@ -139,12 +139,13 @@ div.md-tooltip__inner {
 }
 
 .md-typeset td.linenos {
+    padding-top: 11px;
     font-size: 0.60rem;
     font-family: 'Inconsolata', monospace !important;
 }
 
 .md-typeset td.linenos pre {
-    line-height: 1.69;
+    line-height: 1.635;
 }
 
 ul.md-meta__list {
@@ -153,7 +154,7 @@ ul.md-meta__list {
 
 .filename {
     color: var(--md-default-fg-color--light);
-    font-family: "Roboto Mono";
+    font-family: 'Roboto Mono';
     font-weight: normal;
 }
 

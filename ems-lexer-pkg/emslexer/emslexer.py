@@ -15,7 +15,7 @@ N_H = r'0[Xx][A-Fa-f0-9_]+'
 N_B = r'0[Bb][0-1_]+'
 
 W_OTHERS = words((
-    'fail', 'halt', 'print'), suffix=r'\b')
+    'fail', 'halt', 'printf'), suffix=r'\b')
 
 W_KEYWORDS = words((
     'as', 'break', 'continue', 'else', 'export', 'for', 'from', 'if', 'import', 'return', 'switch', 'while'), suffix=r'\b')
@@ -51,9 +51,9 @@ class EmsLexer(RegexLexer):
             (r'em__C\b', Name.Builtin),
             (r'em\.(fail|halt|print)\b', Name.Other),
             (r'em\.[@]"%%[^"]+"', Name.Other),
-            (r'em\$(meta|template)\b', Name.Class),
+            ## (r'em\$(meta|template)\b', Name.Class),
             (rf'^pub[ ]const[ ]EM__{ID}\b', Name.Tag),
-            ## (W_OTHERS, Name.Other),
+            (W_OTHERS, Name.Other),
             (W_KEYWORDS, Keyword),
             (W_RESERVED, Keyword.Reserved),
             (W_TYPES, Keyword.Type),
@@ -62,6 +62,7 @@ class EmsLexer(RegexLexer):
             (rf'{ID}([#][a-z])?', semantic_callback),
             (rf'([@]{S})([#][a-z])?', semantic_callback),
             (r"(')((\\.+)|[^'])*(')", String),
+            (r"(`)((\\.+)|[^`])*(`)", String),
             (rf'{N_H}|{N_B}|{N_D}[.]{N_D}{N_E}?|{N_D}[LlUu]?', Other),
             (rf'{S}', String),
             (r'.', Other),

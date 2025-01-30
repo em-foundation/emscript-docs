@@ -18,7 +18,9 @@ Welcome to the world of **EM&bull;Script** [_ˈɛm.script_&thinsp;] &ndash; a no
 
 Since its inception in 2010, the focus of the [EM Programming Language](https://docs.openem.org/) has remained constant &ndash; producing "tiny code for tiny chips" where every byte of memory and &mu;Joule of energy matters when deploying low-cost, low-power embedded systems.
 
-Having supported more than twenty 8/16/32-bit MCUs from a dozen silicon vendors, the EM language offers a _higher-level_ programming paradigm coupled with a _higher-level_ of runtime performance when compared with legacy C/C++ code targeting these MCUs. 
+Having supported more than twenty 8/16/32-bit MCUs from a dozen silicon vendors, the EM language promises a _higher-level_ programming paradigm coupled with a _higher-level_ of runtime performance when compared with legacy C/C++ code targeting these MCUs.
+
+As important, just a handful of EM programmers have developed thousands of EM modules re-used across a broad range of high-volume (yet proprietary) IoT applications.&thinsp;  In late 2023, [The EM Foundation](https://www.linkedin.com/company/the-em-foundation/?viewAsMember=true) &ndash; a 501(c)(3) non-profit &ndash; announced an openly available **EM-SDK**. 
 
 !!! question "2 &mdash; So why did you create **EM&bull;Script**"
 
@@ -26,7 +28,19 @@ Having supported more than twenty 8/16/32-bit MCUs from a dozen silicon vendors,
 
 !!! question "4 &mdash; Show me some **EM&bull;Script** source code"
 
-```ems linenums="1" title="em.utils/SoftUart.em"
+Let's start with the usual first example:
+
+```ems linenums="1" title="em.examples.basic/Ex01_HelloP"
+import em from '@$$emscript'
+export const $U = em.$declare('MODULE')
+
+export function em$run() {
+    printf`hello world\n`()
+}
+
+```
+
+```ems linenums="1" title="em.utils/SoftUart"
 import em from '@$$emscript'
 export const $U = em.$declare('MODULE')
 
