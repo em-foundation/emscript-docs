@@ -466,14 +466,24 @@ div.em-ol,div.em-ul {
 }
 
 div.em-ol p::before {
-    background-color: grey;
+    background-color: var(--md-default-bg-color);
     border-radius: 100%;
-    color: black;
+    color: grey;
     content: counter(num);
     counter-increment: num;
     font-weight: 700;
     margin-right: 16px;
     padding: 1px 6px;
+}
+
+div.em-ul p::before {
+    background-color: var(--md-default-bg-color);
+    border-radius: 4px;
+    color: black;
+    content: counter(num);
+    counter-increment: num;
+    font-weight: 700;
+    margin-right: -18px;
 }
 
 div.em-ul-bull p::before {
@@ -501,8 +511,9 @@ div.em-ol p {
 }
 
 div.em-ul p {
-    padding-left: 39px !important;
-    text-indent: -39px !important;
+    padding-left: 36px !important;
+    text-indent: -36px !important;
+    margin: 0px !important;
 }
 
 /* em-content navigation */

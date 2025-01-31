@@ -1,7 +1,7 @@
 # EM&bull;Script &mdash; EM&#8482; Reimagined 
 
 
-Welcome to the world of **EM&bull;Script** [_ˈɛm.script_&thinsp;] &ndash; a novel programming environment targeting resource-constrained embedded systems.&thinsp; To increase your understanding, this site documents all aspects of the **EM&bull;Script** software platform.
+Welcome to **EM&bull;Script** [_ˈɛm.script_&thinsp;] &ndash; a novel programming environment targeting resource-constrained embedded systems using technology rooted in the **EM**&#8482; language.&thinsp; To increase your understanding, this site documents all aspects of the **EM&bull;Script** software platform.
 
 <!-- imagemapper.noc.io -->
 
@@ -18,13 +18,43 @@ Welcome to the world of **EM&bull;Script** [_ˈɛm.script_&thinsp;] &ndash; a no
 
 Since its inception in 2010, the focus of the [EM Programming Language](https://docs.openem.org/) has remained constant &ndash; producing "tiny code for tiny chips" where every byte of memory and &mu;Joule of energy matters when deploying low-cost, low-power embedded systems.
 
-Having supported more than twenty 8/16/32-bit MCUs from a dozen silicon vendors, the EM language promises a _higher-level_ programming paradigm coupled with a _higher-level_ of runtime performance when compared with legacy C/C++ code targeting these MCUs.
+Having supported more than twenty 8/16/32-bit MCUs from a dozen silicon vendors, the EM language promises a _higher-level_&thinsp; programming paradigm coupled with a _higher-level_&thinsp; of runtime performance when compared with legacy C/C++ code targeting these MCUs.
 
 As important, just a handful of EM programmers have developed thousands of EM modules re-used across a broad range of high-volume (yet proprietary) IoT applications.&thinsp;  In late 2023, [The EM Foundation](https://www.linkedin.com/company/the-em-foundation/?viewAsMember=true) &ndash; a 501(c)(3) non-profit &ndash; announced an openly available **EM-SDK**. 
 
 !!! question "2 &mdash; So why did you create **EM&bull;Script**"
 
-!!! question "3 &mdash; What makes TypeScript a viable host"
+Promoting the EM SDK through [blog posts](https://blog.openem.org/) in early 2024 elicited a mixed bag of reactions &ndash; from _"cool, good luck"_&thinsp; to _"sorry, try again"_&thinsp;.&thinsp;  Despite evidence quantifying EM's performance advantage over C/C++, a new (unknown&thinsp;!!) language will set the acceptance bar rather high.
+
+Needless to say, the effort required to sustain a handful of developers pales in comparison to promoting, sustaining, and evolving an open-source EM language for a broader community of embedded programmers.&thinsp; This realization then led to a rather radical change of course.
+
+**Zig&bull;EM** &ndash; announced [here](https://blog.zigem.tech/post-001/) in 3Q24 &ndash; attacked the issue head-on by nominally grafting the novel concepts and constructs of EM onto _another_&thinsp; programming language.&thinsp;
+
+!!! zig "A hidden gem"
+    First released in early 2016, [Zig](https://ziglang.org/) also offers a "higher-level programming with higher-levels of performance" value proposition when compared with C/C++.&thinsp; Zig regularly earns high-marks when held up against other modern system programming languages like Go and Rust &ndash; both already targeting embedded MCUs.
+
+    But unlike the competition, Zig offers an inherent simplicity and transparency reminiscent of C &ndash; the incumbant system programming language which some argue Zig could supplant.&thinsp; At the same time, Zig challenges many entrenched programming practices and demands that we "think differently" from the outset.
+
+    Speaking now from personal experience:&ensp;  While not the easiest language to master, the [Ziggit forum](https://ziggit.dev/) stands apart for how it welcomes, nutures, and encourages new members to the Zig programming community
+
+Compared with other system programming languages, however, Zig very much remains a work in progress:&ensp; a stable 1.0 release still lies years away; and language server support within popular development environments like **VS Code** remains skeletal.
+
+Some lessons learned from the **Zig&bull;EM** experience:
+
+<div markdown class="em-small">
+
+{[sp,em-color-orange]&#x25CF;&ensp;} embedding EM within another programming language can afford re-use of the latter's infrastructure
+
+{[sp,em-color-orange]&#x25CF;&ensp;} a language combo need not compromise runtime performance [time, space, power] versus legacy EM
+
+{[sp,em-color-orange]&#x25CF;&ensp;} while code performance remains a top priority, the _quality_&thinsp; of the coding experience can't lag far behind
+
+</div>
+
+which then brings us to **EM&bull;Script** &ndash; same approach, different language&thinsp;....
+
+
+!!! question "3 &mdash; What makes TypeScript an ideal host"
 
 !!! question "4 &mdash; Show me some **EM&bull;Script** source code"
 
