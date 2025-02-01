@@ -51,14 +51,27 @@ Some lessons learned from the **Zig&bull;EM** experience:
 
 </div>
 
-which then brings us to **EM&bull;Script** &ndash; same approach, different language&thinsp;....
-
+which then brings us then to **EM&bull;Script** &ndash; same approach, different language&thinsp;....
 
 !!! question "3 &mdash; What makes TypeScript an ideal host"
 
+[TypeScript](https://www.typescriptlang.org/) &ndash; younger than EM, in fact &ndash; now claims a perennial spot amongst the five most widely used programming languages.(1) The language also enjoys first-class support within **VS Code** &ndash; an environment written in TypeScript and used by a vast majority of developers.
+{ .annotate }
+
+1. see the [Stack Overflow Developer Survey](https://survey.stackoverflow.co/2024/)
+
+The implementation of **EM&bull;Script** does leverage many of the language services and compiler APIs  delivered as part of TypeScript [TS].&thinsp; As important, a robust TS type-system enables us to capture "the essence of EM" without leaving the confines of the TypeScript language.
+
+But perhaps the strongest reason for choosing TypeScript comes down to this insight:
+
+!!! bulb "&ast;NOBODY&ast; regards TypeScript as a suitable language for programming resource-constrained MCUs&thinsp;!!"
+
+Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the domain of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!
+
+
 !!! question "4 &mdash; Show me some **EM&bull;Script** source code"
 
-Let's start with the usual first example:
+Well, you can't call yourself a programming language if you can't do this:&ensp; :wave: :earth_americas:
 
 ```ems linenums="1" title="em.examples.basic/Ex01_HelloP"
 import em from '@$$emscript'
@@ -67,8 +80,16 @@ export const $U = em.$declare('MODULE')
 export function em$run() {
     printf`hello world\n`()
 }
-
 ```
+
+And to dispel any doubts, let's view the corresponding&thinsp;{[fn].em.ts} source file inside **VS Code** using our special **EM&bull;Script** extension &ndash; which flattens your learning curve through core Type&shy;Script language services like syntax highlighting, code snippets, hover help, and intellisense.
+
+<figure markdown id="fig1">
+![Image info](/assets/fig-home-1.png)
+<figcaption>EM&bull;Script workspace 
+</figure>
+
+For a more realistic and compelling example, consider this "low-level" **EM&bull;Script** module which implements a bit-banged UART transmitter using a GPIO pin:
 
 ```ems linenums="1" title="em.utils/SoftUart"
 import em from '@$$emscript'
@@ -112,6 +133,8 @@ export function put#f(data: u8): void {
 }
 
 ```
+
+
 
 !!! question "5 &mdash; How does **EM&bull;Script** optimize target firmware"
 
