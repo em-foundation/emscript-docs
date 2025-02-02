@@ -68,10 +68,11 @@ But perhaps the strongest reason for choosing TypeScript comes down to this insi
 
 Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the domain of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!
 
-
 !!! question "4 &mdash; Show me some **EM&bull;Script** source code"
 
 Well, you can't call yourself a programming language if you can't do this:&ensp; :wave: :earth_americas:
+
+<span markdown id="ex1">
 
 ```ems linenums="1" title="em.examples.basic/Ex01_HelloP"
 import em from '@$$emscript'
@@ -82,11 +83,11 @@ export function em$run() {
 }
 ```
 
-And to dispel any doubts, let's view the corresponding&thinsp;{[fn].em.ts} source file inside **VS Code** using our special **EM&bull;Script** extension &ndash; which flattens your learning curve through core Type&shy;Script language services like syntax highlighting, code snippets, hover help, and intellisense.
+And to dispel any doubts, let's view the corresponding&thinsp;{[fn].em.ts} source file inside **VS Code** using our special **EM&bull;Script** extension &ndash; which will flatten your learning curve by using core Type&shy;Script language services such as syntax highlighting, hover help, and intellisense.
 
 <figure markdown id="fig1">
 ![Image info](/assets/fig-home-1.png)
-<figcaption>EM&bull;Script workspace 
+<figcaption>EM&bull;Script Workspace 
 </figure>
 
 For a more realistic and compelling example, consider this "low-level" **EM&bull;Script** module which implements a bit-banged UART transmitter using a GPIO pin:
@@ -133,10 +134,32 @@ export function put#f(data: u8): void {
 }
 
 ```
-
-
+While this module clearly interacts with some typical MCU hardware &ndash; controlling interrupts, toggling pins, awaiting &mu;s counters &ndash; the&thinsp;{[fn]em.utils/SoftUart}&thinsp;code shown here in fact remains _100% portable_&thinsp; across any MCU supporting these hardware capabilities.
 
 !!! question "5 &mdash; How does **EM&bull;Script** optimize target firmware"
+
+While sourced as TypeScript, an efficient implementation of the {[cf]put} function defined at line {[lr,1,23]} of {[fn]em.utils/SoftUart} ultimately requires _object code_&thinsp; targeting some MCU architecture.&thinsp; To that end, **EM&bull;Script** could simply translate {[fn].em.ts} files into corresponding C++ sources.
+
+<figure markdown id="fig2">
+![Image info](/assets/fig-home-2.png)
+<figcaption>Compilation Phase 
+</figure>
+
+!!! info "Bear with us &ndash; we've purposely omitted the most critical phase of the **EM&bull;Script** build flow"
+
+Starting with a "top-level" program source file (eg, {[fn]Ex01_HelloP.em.ts}), the translator follows its {[ck]import} chain and generates a {[fn]main.cpp} program &ndash; adding other translated files through its {[ck]#include} directives and implementing the special {[cb]em$run} function seen [here](#ex1) within {[cf]main}.
+
+Like EM before it, the **EM&bull;Script** build flow can leverage any compiler suite which supports the **C++14** standard.&thinsp; And who knows, maybe **EM&bull;Script** will someday support other target programming languages as well &ndash; including **Zig**. :wink:
+
+With a self-contained {[fn]main.cpp} as its sole input, the downstream compiler can aggressively apply stock optimization techniques(1)&thinsp;to the _whole program_&thinsp; &ndash; yielding a smaller, more efficient {[fn]main.out} image.&thinsp; But the real power of **EM&bull;Script** lies in what happens upstream:
+{ .annotate }
+
+1. constant folding, function inlining, dead-code elimination, etc
+
+<figure markdown id="fig3">
+![Image info](/assets/fig-home-3.png)
+<figcaption>Configuration Phase 
+</figure>
 
 !!! question "6 &mdash; Can I start working with the **EM&bull;Script** environment"
 

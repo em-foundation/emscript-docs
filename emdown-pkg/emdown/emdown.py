@@ -11,16 +11,18 @@ def replace_fxn(m):
     tag = args[0]
     if tag == 'bx':
         return f':material-numeric-{args[1]}-box:{{.em-label}}'        
+    elif tag == 'cb':
+        return f'<code class="language-ems"><span class="nb">{txt}</span></code>'
     elif tag == 'cf':
-        return f'<code class="language-em"><span class="nf">{txt}</span></code>'
+        return f'<code class="language-ems"><span class="nf">{txt}</span></code>'
     elif tag == 'ck':
-        return f'<code class="language-em"><span class="k">{txt}</span></code>'
+        return f'<code class="language-ems"><span class="k">{txt}</span></code>'
     elif tag == 'cn':
-        return f'<code class="language-em"><span class="n">{txt}</span></code>'
+        return f'<code class="language-ems"><span class="n">{txt}</span></code>'
     elif tag == 'ct':
-        return f'<code class="language-em"><span class="t">{txt}</span></code>'
+        return f'<code class="language-ems"><span class="t">{txt}</span></code>'
     elif tag == 'cu':
-        return f'<code class="language-em"><span class="nn">{txt}</span></code>'
+        return f'<code class="language-ems"><span class="nn">{txt}</span></code>'
     elif tag == 'cx':
         return f'<code><span class="x">{txt}</span></code>'
     elif tag == 'es':
