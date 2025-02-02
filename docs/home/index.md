@@ -1,5 +1,6 @@
 # EM&bull;Script &mdash; EM&#8482; Reimagined 
 
+<style>.md-typeset h2 {margin-bottom: 1.5em !important;}</style>
 
 Welcome to **EM&bull;Script** [_ˈɛm.script_&thinsp;] &ndash; a novel programming environment targeting resource-constrained embedded systems using technology rooted in the **EM**&#8482; language.&thinsp; To increase your understanding, this site documents all aspects of the **EM&bull;Script** software platform.
 
@@ -13,6 +14,8 @@ Welcome to **EM&bull;Script** [_ˈɛm.script_&thinsp;] &ndash; a novel programmi
   </a>
 </svg>
 </div>
+
+## What and why
 
 !!! question "1 &mdash; Refresh my memory of EM&thinsp;..."
 
@@ -68,11 +71,13 @@ But perhaps the strongest reason for choosing TypeScript comes down to this insi
 
 Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the domain of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!
 
+## Show and tell
+
 !!! question "4 &mdash; Show me some **EM&bull;Script** source code"
 
 Well, you can't call yourself a programming language if you can't do this:&ensp; :wave: :earth_americas:
 
-<span markdown id="ex1">
+<span markdown id="ex1"></span>
 
 ```ems linenums="1" title="em.examples.basic/Ex01_HelloP"
 import em from '@$$emscript'
@@ -145,7 +150,7 @@ While sourced as TypeScript, an efficient implementation of the {[cf]put} functi
 <figcaption>Compilation Phase 
 </figure>
 
-!!! info "Bear with us &ndash; we've purposely omitted the most critical phase of the **EM&bull;Script** build flow"
+!!! info "Bear with us &ndash; we've purposely omitted the most critical phase of the **EM&bull;Script** program build-flow&thinsp;!!"
 
 Starting with a "top-level" program source file (eg, {[fn]Ex01_HelloP.em.ts}), the translator follows its {[ck]import} chain and generates a {[fn]main.cpp} program &ndash; adding other translated files through its {[ck]#include} directives and implementing the special {[cb]em$run} function seen [here](#ex1) within {[cf]main}.
 
@@ -161,24 +166,35 @@ With a self-contained {[fn]main.cpp} as its sole input, the downstream compiler 
 <figcaption>Configuration Phase 
 </figure>
 
+The **EM&bull;Script** program build-flow inserts a novel _configuration_&thinsp; step between initial translation and downstream compilation &ndash; enabling a world of application-centric optimizations often missed when building legacy C/C++ programs.
+
+Besides generating C++ code for each {[fn].em.ts} source file, **EM&bull;Script** invokes an extended **TypeScript&rarr;JavaScript** transpiler which yields corresponding {[fn].em.js} modules &ndash; all combined into a single {[fn]main.js} program executed at _build-time_&thinsp; on your host PC.
+
+Our configuration phase in fact serves as a _staging area_&thinsp; where the whole program comes together for a "dry-run", so to speak.&thinsp; By implementing special  functions(1)inside {[ck]namespace}&thinsp;{[es,nc]em$meta}, each module can actively participate in the configuration process at build-time:
+{ .annotate }
+
+1. {[cb]em$configure}, {[cb]em$construct}, {[cb]em$generate}, etc
+
+<div markdown class="em-small">
+
+{[sp,em-color-teal]&#x25CF;&ensp;} by binding values to **EM&bull;Script** {[cb]$config} parameters published by other modules
+
+{[sp,em-color-teal]&#x25CF;&ensp;} by pre-initializing static constants and variables used internally by the module
+
+{[sp,em-color-teal]&#x25CF;&ensp;} by wiring one module to another via the {[cb]$proxy}&thinsp;&ndash;&thinsp;{[cb]$delegate} design pattern
+
+{[sp,em-color-teal]&#x25CF;&ensp;} by forcibly including&thinsp;/&thinsp;excluding individual modules from downstream compilation
+
+{[sp,em-color-teal]&#x25CF;&ensp;} by generating fragments of specialized C/C++ code which {[fn]main.cpp} will incorporate
+
+</div>
+
+!!! bulb "As such, **EM&bull;Script** serves as its own _meta-language_&thinsp; used for build-time _meta-programming_&thinsp;."
+
+With boundless resources on your host PC &ndash; and with all of **Node.js** available to the {[fn]main.js} meta-program &ndash; opportunities abound for individual modules to encapsulate application-centric logic that ultimately shapes program images targeting resource-constrained MCUs.
+
+## Next steps
+
 !!! question "6 &mdash; Can I start working with the **EM&bull;Script** environment"
 
 !!! question "7 &mdash; Tell me more about the longer-term roadmap for **EM&bull;Script**"
-
-
-
-
-<!--
-
-!!! question "1 &mdash; Remind me about EM"
-    To fill a void...&thinsp; While **C** remains the dominant programming language for 8&thinsp;/&thinsp;16&thinsp;/&thinsp;32-bit microcontrollers [MCUs] with limited memory and processing resources, we see opportunites for a _higher-level_ language which at the same time paves the way for _higher-levels_ of embedded system performance.
-
-!!! question "2 &mdash; So why create **EM&bull;Script**"
-    Quite simply, by reducing overall program size &ndash; a careabout for software developers working with resource-constrained MCUs.&thinsp; Reducing runtime memory requirements not only can improve program execution time, but can dramatically lower overall power consumption within the MCU as well.
-
-    Though the EM language translator ultimately generates (portable) C/C++ code as output, a novel _configuration_ phase within the program build-flow serves as the "secret sauce" behind these performance improvements.
-
-    A quick pass through&thinsp; [EM&thinsp;.&thinsp;optimize = WPO&thinsp;+&thinsp;ACO](//blog.openem.org/post-005/){ .em-link } &thinsp;should offer some more insights.
-
--->
-
