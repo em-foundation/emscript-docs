@@ -50,9 +50,9 @@ def replace_fxn(m):
     elif tag == 'sc':
         return screen_capture(args[1], args[2], txt)
     elif tag == 'se':
-        return f'<code class="language-zigem highlight"><span class="se">{txt}</span></code>'
+        return f'<code class="language-ems highlight"><span class="se">{txt}</span></code>'
     elif tag == 'sh':
-        return f'<code class="language-zigem highlight"><span class="si">{txt}</span></code>'
+        return f'<code class="language-ems highlight"><span class="si">{txt}</span></code>'
     elif tag == 'sp':
         return f'<span class="{args[1]}">{txt}</span>'
     elif tag == 'wn':

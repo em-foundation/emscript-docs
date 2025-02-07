@@ -1,14 +1,27 @@
-# Getting started with Zig&bull;EM
+# Getting started with EM&bull;Script
 
-Using the **Zig&bull;EM** framework requires a cross-development environment &ndash; in which a _hosted_&thinsp; software development kit will compile and load executable programs onto _target_&thinsp; MCU hardware.&thinsp; For the host, you can use a PC running **Windows**, **Linux**, or **MacOS**; for the target, you can choose any MCU board for which a **Zig&bull;EM** support package already exists.
+**EM&bull;Script** requires a cross-development environment comprising _hosted_&thinsp; software tools will compile and load executable programs onto _target_&thinsp; MCU hardware.&thinsp; For the host, you'll use a PC running **Windows**, **Linux**, or **MacOS**; for the target, you can choose any MCU board for which an **EM&bull;Script** support package already exists.
+
+Before turning to the **EM&bull;Script SDK** (described next), you should first install or upgrade the following tooling environments on your host PC:
+
+|  |  |  |
+|:-|:-|:-|
+|[Node.js](https://nodejs.org/en/download)|version 16.3.0 or later| execute {[sh]node}&thinsp;{[sh]--version} to verify |
+|[VS Code](https://code.visualstudio.com/download)|version 1.80.0 or later| execute {[sh]code}&thinsp;{[sh]--version} to verify |
+
+=== "Windows"
+
+    If you don't already have a recent version of the **Git Bash** shell, you should also install [Git for Windows](https://gitforwindows.org/).&nbsp;  To verify your setup, ensure that the {[sh]node} and {[sh]code} commands from the previous table operate correctly under **Git Bash**. 
+
+!!! warning "Do _not_ proceed forward if these verification checks should fail&thinsp;!!!"
+
 
 ## Software development kit
 
-The process for (initially) installing and (subsequently) updating your local version of the **Zig&bull;EM** SDK boils down to three basic steps:
+The **EM&bull;Script SDK** brings together two complementary elements:
 
-{[bx,1]} &nbsp; install [Zig](https://ziglang.org/download/)<br>
-{[bx,2]} &nbsp; clone [zigem-sdk](https://github.com/em-foundation/zigem-sdk/)<br>
-{[bx,3]} &nbsp; execute {[sh]zig build}
+{[bx,1]} &nbsp; a **Git** [repository](https://github.com/em-foundation/emscript-content), which bundles portable as well as MCU-specific target content<br>
+{[bx,2]} &nbsp; a **VS Code** [extension](https://marketplace.visualstudio.com/items?itemName=the-em-foundation.em-builder), which provisions host tooling needed to build target programs<br>
 
 As part of step {[bx,1]}, **Zig&bull;EM** currently requires version 0.13.0 of Zig.&thinsp; Once you've added the {[fn]zig} executable to your OS path, invoke {[sh]zig version} from the command-line to confirm.
 

@@ -188,6 +188,10 @@ span.em-color-teal {
     color: hsl(180, 100%, 75%);
 }
 
+span.em-color-logo {
+    color: hsl(165, 100%, 50%);
+}
+
 span.em-color-orange {
     color: hsl(39, 100%, 50%);
 }
@@ -494,9 +498,11 @@ div.em-ul-bull p::before {
 }
 
 div.em-ul-check p::before {
-    content: "\2714\2003";
+    content: "\2611\2003";
     color: hsl(42, 100%, 60%);
     font-size: 18px;
+    margin-left: -4px;
+    padding-right: 12px;
 }
 
 div.em-ul-circ p::before {

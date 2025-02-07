@@ -2,7 +2,7 @@
 
 <style>.md-typeset h2 {margin-bottom: 1.5em !important;}</style>
 
-Welcome to **EM&bull;Script** [_ˈɛm.script_&thinsp;] &ndash; a novel programming environment targeting resource-constrained embedded systems using technology rooted in the **EM**&#8482; language.&thinsp; To increase your understanding, this site documents all aspects of the **EM&bull;Script** software platform.
+Welcome (back) to **EM** [_ˈɛm_&thinsp;] &ndash; a programming environment which targets resource-constrained embedded systems.&thinsp; To flatten its learning curve and drive broader use, we've now reimagined EM within the boundaries of the TypeScript language &ndash; leading us to **EM&bull;Script**.
 
 <!-- imagemapper.noc.io -->
 
@@ -27,18 +27,18 @@ As important, just a handful of EM programmers have developed thousands of EM mo
 
 !!! question "2 &mdash; So why did you create **EM&bull;Script**"
 
-Promoting the EM SDK through [blog posts](https://blog.openem.org/) in early 2024 elicited a mixed bag of reactions &ndash; from _"cool, good luck"_&thinsp; to _"sorry, try again"_&thinsp;.&thinsp;  Despite evidence quantifying EM's performance advantage over C/C++, a new (unknown&thinsp;!!) language will set the acceptance bar rather high.
+Promoting the EM SDK through [blog posts](https://blog.openem.org/) in early 2024 elicited a mixed bag of reactions &ndash; from _"cool, good luck"_&thinsp; to _"sorry, try again"_&thinsp;.&thinsp;  Despite evidence quantifying EM's performance advantage over C/C++, a new (and unknown&thinsp;!!) language does raise the acceptance bar.
 
-Needless to say, the effort required to sustain a handful of developers pales in comparison to promoting, sustaining, and evolving an open-source EM language for a broader community of embedded programmers.&thinsp; This realization then led to a rather radical change of course.
+Needless to say, the effort required to support a handful of developers pales in comparison to promoting, sustaining, and evolving an open-source EM language for the broad community of embedded programmers.&thinsp; This realization then led to a radical change of course.
 
 **Zig&bull;EM** &ndash; announced [here](https://blog.zigem.tech/post-001/) in 3Q24 &ndash; attacked the issue head-on by nominally grafting the novel concepts and constructs of EM onto _another_&thinsp; programming language.&thinsp;
 
 !!! zig "A hidden gem"
     First released in early 2016, [Zig](https://ziglang.org/) also offers a "higher-level programming with higher-levels of performance" value proposition when compared with C/C++.&thinsp; Zig regularly earns high-marks when held up against other modern system programming languages like Go and Rust &ndash; both already targeting embedded MCUs.
 
-    But unlike the competition, Zig offers an inherent simplicity and transparency reminiscent of C &ndash; the incumbant system programming language which some argue Zig could supplant.&thinsp; At the same time, Zig challenges many entrenched programming practices and demands that we "think differently" from the outset.
+    But unlike the competition, Zig offers an inherent simplicity and transparency reminiscent of classic C &ndash; the incumbant system programming language which some argue Zig could supplant.&thinsp; At the same time, Zig challenges many entrenched programming practices and demands that we "think differently" from the outset.
 
-    Speaking now from personal experience:&ensp;  While not the easiest language to master, the [Ziggit forum](https://ziggit.dev/) stands apart for how it welcomes, nutures, and encourages new members to the Zig programming community
+    Speaking now from personal experience:&ensp;  While not the easiest language to master, the [Ziggit forum](https://ziggit.dev/) stands apart for how it welcomes, nutures, and encourages new members of the Zig programming community.
 
 Compared with other system programming languages, however, Zig very much remains a work in progress:&ensp; a stable 1.0 release still lies years away; and language server support within popular development environments like **VS Code** remains skeletal.
 
@@ -63,13 +63,13 @@ which then brings us then to **EM&bull;Script** &ndash; same approach, different
 
 1. see the [Stack Overflow Developer Survey](https://survey.stackoverflow.co/2024/)
 
-The implementation of **EM&bull;Script** does leverage many of the language services and compiler APIs  delivered as part of TypeScript [TS].&thinsp; As important, a robust TS type-system enables us to capture "the essence of EM" without leaving the confines of the TypeScript language.
+**EM&bull;Script** does in fact leverage many of the language services and compiler APIs delivered as part of TypeScript.&thinsp; As important, the later's robust type-system enables us to capture "the essence of EM" without leaving the confines of the TypeScript language.
 
 But perhaps the strongest reason for choosing TypeScript comes down to this insight:
 
 !!! bulb "&ast;NOBODY&ast; regards TypeScript as a suitable language for programming resource-constrained MCUs&thinsp;!!"
 
-Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the domain of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!
+Opportunities abound.... Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the domain of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!
 
 ## Show and tell
 
@@ -92,10 +92,10 @@ And to dispel any doubts, let's view the corresponding&thinsp;{[fn].em.ts} sourc
 
 <figure markdown id="fig1">
 ![Image info](/assets/fig-home-1.png)
-<figcaption>EM&bull;Script Workspace 
+<figcaption>VS Code Workspace 
 </figure>
 
-For a more realistic and compelling example, consider this "low-level" **EM&bull;Script** module which implements a bit-banged UART transmitter using a GPIO pin:
+For a more realistic and compelling example, consider this "low-level" **EM&bull;Script** module which implements a bit-banged UART transmitter using a GPIO pin and a hardware counter:
 
 ```ems linenums="1" title="em.utils/SoftUart"
 import em from '@$$emscript'
@@ -139,11 +139,11 @@ export function put#f(data: u8): void {
 }
 
 ```
-While this module clearly interacts with some typical MCU hardware &ndash; controlling interrupts, toggling pins, awaiting &mu;s counters &ndash; the&thinsp;{[fn]em.utils/SoftUart}&thinsp;code shown here in fact remains _100% portable_&thinsp; across any MCU supporting these hardware capabilities.
+While this module clearly interacts with typical MCU hardware &ndash; controlling interrupts, toggling pins, awaiting &mu;s counters &ndash; the&thinsp;{[fn]em.utils/SoftUart}&thinsp;code shown here in fact remains _100% portable_&thinsp; across any MCU offering these sorts of hardware capabilities.
 
 !!! question "5 &mdash; How does **EM&bull;Script** optimize target firmware"
 
-While sourced as TypeScript, an efficient implementation of the {[cf]put} function defined at line {[lr,1,23]} of {[fn]em.utils/SoftUart} ultimately requires _object code_&thinsp; targeting some MCU architecture.&thinsp; To that end, **EM&bull;Script** could simply translate {[fn].em.ts} files into corresponding C++ sources.
+While sourced as TypeScript, an efficient implementation of the {[cf]put} function defined at line {[lr,1,23]} of {[fn]em.utils/SoftUart} ultimately requires _object code_&thinsp; targeting the MCU instruction-set.&thinsp; To that end, **EM&bull;Script** could simply translate {[fn].em.ts} files into corresponding C++ sources.
 
 <figure markdown id="fig2">
 ![Image info](/assets/fig-home-2.png)
@@ -152,7 +152,7 @@ While sourced as TypeScript, an efficient implementation of the {[cf]put} functi
 
 !!! info "Bear with us &ndash; we've purposely omitted the most critical phase of the **EM&bull;Script** program build-flow&thinsp;!!"
 
-Starting with a "top-level" program source file (eg, {[fn]Ex01_HelloP.em.ts}), the translator follows its {[ck]import} chain and generates a {[fn]main.cpp} program &ndash; adding other translated files through its {[ck]#include} directives and implementing the special {[cb]em$run} function seen [here](#ex1) within {[cf]main}.
+Starting with a "top-level" program source file (eg, {[fn]Ex01_HelloP.em.ts}), the translator follows its {[ck]import} chain and generates a {[fn]main.cpp} program &ndash; adding other translated files through {[ck]#include} directives and implementing the special {[cb]em$run} function seen [here](#ex1) within {[cf]main}.
 
 Like EM before it, the **EM&bull;Script** build flow can leverage any compiler suite which supports the **C++14** standard.&thinsp; And who knows, maybe **EM&bull;Script** will someday support other target programming languages as well &ndash; including **Zig**. :wink:
 
@@ -195,6 +195,33 @@ With boundless resources on your host PC &ndash; and with all of **Node.js** ava
 
 ## Next steps
 
-!!! question "6 &mdash; Can I start working with the **EM&bull;Script** environment"
+!!! question "6 &mdash; Can I start exploring the **EM&bull;Script** environment"
+
+Absolutely &ndash; the [Setup](/setup){ .em-line } section of this site will help you get started with our **EM&bull;Script SDK**.&thinsp; Once you've provisioned a compatible(1)host PC, you can cross-compile target applications using **EM&bull;Script** &ndash; either from the command-line or else within the **VS Code** environment.
+{ .annotate }
+
+1. **Windows**, **Linux**, or **MacOS**
+
+While not required, we strongly encourage you to purchase a low-cost MCU development board currently supported by the **SDK**.&thinsp;  Nothing beats the joy of blinking those LEDs&thinsp;!!&thinsp; :joy:
+
+If you'd prefer to just "look around", check out the other sections of this site &ndash; which we'll continue to populate going forward.&thinsp; You can also browse the set of target [Packages](/packages) delivered with the latest **EM&bull;Script SDK**.&thinsp; And for those wanting OSS, endulge yourself at [GitHub](https://github.com/em-foundation).
 
 !!! question "7 &mdash; Tell me more about the longer-term roadmap for **EM&bull;Script**"
+
+After a one-year detour &ndash; which led us to **EM&bull;Script** via **Zig&bull;EM** &ndash; we can finally continue down the path originally charted by the EM programming language:
+
+<div markdown class="em-ul em-ul-check">
+
+support a broad(er) range of embedded MCUs and document how to create an {[cb]em$distro}
+
+offer lightweight connectivity frameworks built upon standard&thinsp;/&thinsp;proprietary wireless protocols
+
+explore the impact of 10&thinsp;X code-size reductions on novel MCU architectures based on **RISC-V**
+
+showcase **EM&bull;Script** through application development projects sponsored by **The EM Foundation**
+
+</div>
+
+**EM&bull;Script** &ndash; {[sp,em-color-logo]The embedded language for embedded programming}
+
+{[hc]}
