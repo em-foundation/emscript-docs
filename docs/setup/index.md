@@ -71,15 +71,38 @@ The **SDK** contains all tooling needed to compile and load **EM&bull;Script** p
     
 ## VS Code extension
 
-To flatten your learning curve, we strongly encourage use of [VS Code](https://code.visualstudio.com/download)&thinsp; [version 1.80.0 or higher] when working with the **Zig&bull;EM** programming framework.
+To flatten your learning curve, we strongly encourage use of our **EM&bull;Script Extension**, which you can install from the command-line prior to launching **VS Code**:
 
-!!! info "Enter {[sh]code --version} from the command-line to verify your current installation."
+<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][~/emscript-sdk]}
+$ {[sp,em-color-orange]code --install-extension emscript*.vsix}<br>Installing extensions...
+Extension ‘emscript-26.0.1.202502091752.vsix’ was successfully installed.<br>
+{[sp,em-color-blue][~/emscript-sdk]}
+$ {[sp,em-color-orange]code .}</code></pre></div>
 
-Once inside **VS Code**, install the latest version of our **Zig&bull;EM Extension** which you'll find in the VS Code marketplace:
+If all goes well, you should see a top-level listing of the {[fn]~/emscript-sdk} folder together with a short notification that the **EM&bull;Script Extension** has activated.
 
 <figure markdown id="fig1">
 ![Image info](/assets/fig-setup-1.png)
+<figcaption>Launching VS Code
 </figure>
+
+You can learn more by navigating to the **EXTENSIONS > INSTALLED** side-panel or else by visiting the **EM&bull;Script** page at the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=the-em-foundation.emscript).
+
+<figure markdown id="fig2">
+![Image info](/assets/fig-setup-2.png)
+<figcaption>Installed Extensions
+</figure>
+
+From here, you should drill-down into the {[fn]~/emscript-sdk/workspace} sub-folder and explore the software content which **EM&bull;Script** can build and load onto your target MCU hardware.
+
+<figure markdown id="fig3">
+![Image info](/assets/fig-setup-3.png)
+<figcaption>Target Content
+</figure>
+
+
+
+
 
 Our **Zig&bull;EM** extension supports features already familiar to VS Code users &ndash; syntax highlighting, code navigation, outline views, hover help, intellisense completion, and many more.
 
