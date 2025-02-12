@@ -1,2 +1,2 @@
-# Blogging about Zig&bull;EM
+# Blogging about EM&bull;Script
 
