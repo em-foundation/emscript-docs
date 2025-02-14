@@ -82,21 +82,21 @@ $ {[sp,em-color-orange]code .}</code></pre></div>
 If all goes well, you should see a top-level listing of the {[fn]~/emscript-sdk} folder together with a short notification that the **EM&bull;Script Extension** has activated.
 
 <figure markdown id="fig1">
-![Image info](../../assets/fig-setup-1.png)
+![Image info](../assets/fig-setup-1.png)
 <figcaption>Launching VS Code
 </figure>
 
 You can learn more by navigating to the **EXTENSIONS > INSTALLED** side-panel or else by visiting the **EM&bull;Script** page at the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=the-em-foundation.emscript).
 
 <figure markdown id="fig2">
-![Image info](../../assets/fig-setup-2.png)
+![Image info](../assets/fig-setup-2.png)
 <figcaption>Installed Extensions
 </figure>
 
 From here, you should drill-down into the {[fn]~/emscript-sdk/workspace} sub-folder and explore the software content which **EM&bull;Script** can build and load onto your target MCU hardware.
 
 <figure markdown id="fig3">
-![Image info](../../assets/fig-setup-3.png)
+![Image info](../assets/fig-setup-3.png)
 <figcaption>Target Content
 </figure>
 
