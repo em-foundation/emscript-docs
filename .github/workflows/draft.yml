@@ -30,8 +30,9 @@ jobs:
           ref: draft
       - name: Move Site to Subpath
         run: |
-          mkdir -p site/draft
-          mv site/* site/draft/
+          mkdir -p tmp_draft
+          mv site/* tmp_draft/
+          mv tmp_draft site/draft 
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
