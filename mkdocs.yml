@@ -121,6 +121,9 @@ nav:
         - Ex11_Alarm1P: shelf/em.core/em.examples.basic/Ex11_Alarm1P.md
         - Ex12_Alarm2P: shelf/em.core/em.examples.basic/Ex12_Alarm2P.md
         - Ex13_TickerP: shelf/em.core/em.examples.basic/Ex13_TickerP.md
+      - em.examples.combo:
+        - shelf/em.core/em.examples.combo/index.md
+        - Ex01_TickerP: shelf/em.core/em.examples.combo/Ex01_TickerP.md
       - em.hal:
         - shelf/em.core/em.hal/index.md
         - BusyWaitI: shelf/em.core/em.hal/BusyWaitI.md
