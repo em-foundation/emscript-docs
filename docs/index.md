@@ -9,7 +9,7 @@ Welcome (back) to **EM** [_ˈɛm_&thinsp;] &ndash; a programming environment whi
 
 <div style="margin-bottom: -15px">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1262 675">
-  <image width="1262" height="675" xlink:href="/assets/splash.png"></image>
+  <image width="1262" height="675" xlink:href="assets/splash.png"></image>
   <a xlink:href="https://www.linkedin.com/company/the-em-foundation/about/?viewAsMember=true" target="_blank">
     <rect x="1070" y="499" fill="#fff" opacity="0" width="58" height="74"></rect>
   </a><a xlink:href="https://github.com/em-foundation" target="_blank">
@@ -94,7 +94,7 @@ export function em$run() {
 And to dispel any doubts, let's view the corresponding&thinsp;{[fn].em.ts} source file inside **VS Code** using our special **EM&bull;Script** extension &ndash; which will flatten your learning curve by using core Type&shy;Script language services such as syntax highlighting, hover help, and intellisense.
 
 <figure markdown id="fig1">
-![Image info](/assets/fig-home-1.png)
+![Image info](assets/fig-home-1.png)
 <figcaption>VS Code Workspace 
 </figure>
 
@@ -149,7 +149,7 @@ While this module clearly interacts with typical MCU hardware &ndash; controllin
 While sourced as TypeScript, an efficient implementation of the {[cf]put} function defined at line {[lr,1,23]} of {[fn]em.utils/SoftUart} ultimately requires _object code_&thinsp; targeting the MCU instruction-set.&thinsp; To that end, **EM&bull;Script** could simply translate {[fn].em.ts} files into corresponding C++ sources.
 
 <figure markdown id="fig2">
-![Image info](/assets/fig-home-2.png)
+![Image info](assets/fig-home-2.png)
 <figcaption>Compilation Phase 
 </figure>
 
@@ -165,7 +165,7 @@ With a self-contained {[fn]main.cpp} as its sole input, the downstream compiler 
 1. constant folding, function inlining, dead-code elimination, etc
 
 <figure markdown id="fig3">
-![Image info](/assets/fig-home-3.png)
+![Image info](assets/fig-home-3.png)
 <figcaption>Configuration Phase 
 </figure>
 
