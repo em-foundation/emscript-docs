@@ -431,7 +431,7 @@ span.em-screen {
 
 .md-typeset .admonition.tools,
 .md-typeset details.tools {
-    border-color: hsl(352, 60%, 50%);
+    border-color: hsl(30, 100%, 60%);
 }
 .md-typeset .tools > .admonition-title,
 .md-typeset .tools > summary {
@@ -439,7 +439,7 @@ span.em-screen {
 }
 .md-typeset .tools > .admonition-title::before,
 .md-typeset .tools > summary::before {
-    background-color: hsl(352, 60%, 50%);
+    background-color: hsl(30, 100%, 60%);
     -webkit-mask-image: var(--md-admonition-icon--tools);
         mask-image: var(--md-admonition-icon--tools);
 }
