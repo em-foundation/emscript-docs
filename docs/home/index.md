@@ -6,11 +6,14 @@ Welcome (back) to **EM** [_ˈɛm_&thinsp;] &ndash; a programming environment whi
 
 <!-- imagemapper.noc.io -->
 
+
 <div style="margin-bottom: -15px">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1262 674">
-  <image width="1262" height="674" xlink:href="/assets/splash.png"></image>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1262 675">
+  <image width="1262" height="675" xlink:href="/assets/splash.png"></image>
   <a xlink:href="https://www.linkedin.com/company/the-em-foundation/about/?viewAsMember=true" target="_blank">
-    <rect x="6" y="500" fill="#fff" opacity="0" width="188" height="77"></rect>
+    <rect x="1070" y="499" fill="#fff" opacity="0" width="58" height="74"></rect>
+  </a><a xlink:href="https://github.com/em-foundation" target="_blank">
+    <rect x="1150" y="499" fill="#fff" opacity="0" width="67" height="74"></rect>
   </a>
 </svg>
 </div>
