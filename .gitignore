@@ -1,6 +1,6 @@
 .history/
 build/
-shelf/
+/docs/shelf/
 pyenv/
 **/dist
 **/*.egg-info
