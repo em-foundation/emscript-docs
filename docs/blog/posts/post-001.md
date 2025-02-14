@@ -6,18 +6,18 @@ readtime: 1
 
 # (Re-)Introducing EM&thinsp;!!
 
-The journey continues....&thinsp; Going "back to the drawing-board", we've reworked the original [EM Programming Language](https://docs.emlang.openem.org/) into a novel  environment &ndash; which quantitatively improves embedded code  _performance_&thinsp; as well as qualitatively elevates your embedded coding _experience_&thinsp;. 
+The journey continues....&thinsp; Going "back to the drawing-board", we've reworked the original [EM Programming Language](https://docs.emlang.openem.org/) into a novel  environment &ndash; which _quantitatively_&thinsp; improves embedded code performance as well as _qualitatively_&thinsp; elevates your embedded coding experience. 
 
 
 <!-- more -->
 
 ## From EM to **EM&bull;Script**
 
-The simple recipe which we've followed:
+We've followed a very simple recipe in our latest flagship effort:
 
 {[bx,1]} &nbsp; start with **TypeScript** &ndash; a widely-used ("top-five") modern programming language;<br>
-{[bx,2]} &nbsp; add **VS Code** to the mix &ndash; the popular IDE actually written in TypeScript; and then<br>
-{[bx,2]} &nbsp; fold in some "secret-sauce" found in **EM** &ndash; yielding the **EM&bull;Script**  environment
+{[bx,2]} &nbsp; add **VS Code** to the mix &ndash; the popular IDE in fact written in TypeScript; and then<br>
+{[bx,2]} &nbsp; fold in some "secret-sauce" found in **EM** &ndash; which finally takes us to **EM&bull;Script**
 
 Operating within the confines of **TypeScript** &ndash; and leveraging its world-class language support within **VS Code** &ndash; we've morphed a standalone **EM** language (used by just a handful of developers since 2010) into an **EM&bull;Script** environment accessible to the broader community.
 
