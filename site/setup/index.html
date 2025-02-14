@@ -3367,23 +3367,26 @@ $ <span class="em-color-orange">code .</span></code></pre></p>
 </div>
 <p>If all goes well, you should see a top-level listing of the <code><span class="filename">~/emscript-sdk</span></code> folder together with a short notification that the <strong>EM&bull;Script Extension</strong> has activated.</p>
 <figure id="fig1">
-<p><a class="glightbox" href="/assets/fig-setup-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="/assets/fig-setup-1.png" /></a></p>
+<p><a class="glightbox" href="../../assets/fig-setup-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="../../assets/fig-setup-1.png" /></a></p>
 <figcaption>Launching VS Code
 </figcaption>
 </figure>
 <p>You can learn more by navigating to the <strong>EXTENSIONS &gt; INSTALLED</strong> side-panel or else by visiting the <strong>EM&bull;Script</strong> page at the <a href="https://marketplace.visualstudio.com/items?itemName=the-em-foundation.emscript">VS Code Marketplace</a>.</p>
 <figure id="fig2">
-<p><a class="glightbox" href="/assets/fig-setup-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="/assets/fig-setup-2.png" /></a></p>
+<p><a class="glightbox" href="../../assets/fig-setup-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="../../assets/fig-setup-2.png" /></a></p>
 <figcaption>Installed Extensions
 </figcaption>
 </figure>
 <p>From here, you should drill-down into the <code><span class="filename">~/emscript-sdk/workspace</span></code> sub-folder and explore the software content which <strong>EM&bull;Script</strong> can build and load onto your target MCU hardware.</p>
 <figure id="fig3">
-<p><a class="glightbox" href="/assets/fig-setup-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="/assets/fig-setup-3.png" /></a></p>
+<p><a class="glightbox" href="../../assets/fig-setup-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="../../assets/fig-setup-3.png" /></a></p>
 <figcaption>Target Content
 </figcaption>
 </figure>
-<p>Our <strong>Zig&bull;EM</strong> extension supports features already familiar to VS Code users &ndash; syntax highlighting, code navigation, outline views, hover help, intellisense completion, and many more.</p>
+<!--
+Our **Zig&bull;EM** extension supports features already familiar to VS Code users &ndash; syntax highlighting, code navigation, outline views, hover help, intellisense completion, and many more.
+-->
+
 <h2 id="command-line">Command line</h2>
 <p>The <strong>SDK</strong> contains an <code class="language-ems highlight"><span class="si">emscript</span></code> command-line tool which compiles and loads programs for your target MCU hardware.&thinsp; Used internally by <code class="language-ems highlight"><span class="si">npm</span></code>&thinsp;<code class="language-ems highlight"><span class="si">run</span></code>&thinsp;<code class="language-ems highlight"><span class="si">verify-build</span></code> as part of installation step <span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span>, you can access the <code class="language-ems highlight"><span class="si">emscript</span></code> command directly from your PC's shell.</p>
 <p>You'll find the <code class="language-ems highlight"><span class="si">emscript</span></code> executable at <code><span class="filename">emscript-sdk/node_modules/.bin/emscript</span></code>;&thinsp; for convenience, amend your shell's <code class="language-ems highlight"><span class="si">$PATH</span></code> or else reference <code class="language-ems highlight"><span class="si">emscript</span></code> with a named link or alias:</p>

@@ -30,9 +30,9 @@ But ultimately, you'll have to evaluate **EM&bull;Script** on your own terms &nd
 
 <div markdown class="em-ul em-ul-check">
 
-visit this site's [Home](/home) page and read more about the what&thinsp;|&thinsp;why&thinsp;|&thinsp;how of **EM&bull;Script** 
+visit this site's [Home](../../index.md) page and read more about the what&thinsp;|&thinsp;why&thinsp;|&thinsp;how of **EM&bull;Script** 
 
-download the latest version of the **EM&bull;Script SDK** and even blink some LEDs [see [Setup](/setup)]  
+download the latest version of the **EM&bull;Script SDK** and even blink some LEDs [see [Setup](../../setup/index.md)]  
 
 follow **The EM Foundation** on [GitHub](https://github.com/em-foundation) and [LinkedIn](https://www.linkedin.com/company/the-em-foundation) &ndash; and pass this information on to others
 

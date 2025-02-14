@@ -200,14 +200,14 @@ With boundless resources on your host PC &ndash; and with all of **Node.js** ava
 
 !!! question "6 &mdash; Can I start exploring the **EM&bull;Script** environment"
 
-Absolutely &ndash; the [Setup](/setup){ .em-line } section of this site will help you get started with our **EM&bull;Script SDK**.&thinsp; Once you've provisioned a compatible(1)host PC, you can cross-compile target applications using **EM&bull;Script** &ndash; either from the command-line or else within the **VS Code** environment.
+Absolutely &ndash; the [Setup](setup/index.md){ .em-line } section of this site will help you get started with our **EM&bull;Script SDK**.&thinsp; Once you've provisioned a compatible(1)host PC, you can cross-compile target applications using **EM&bull;Script** &ndash; either from the command-line or else within the **VS Code** environment.
 { .annotate }
 
 1. **Windows**, **Linux**, or **MacOS**
 
 While not required, we strongly encourage you to purchase a low-cost MCU development board currently supported by the **SDK**.&thinsp;  Nothing beats the joy of blinking those LEDs&thinsp;!!&thinsp; :joy:
 
-If you'd prefer to just "look around", check out the other sections of this site &ndash; which we'll continue to populate going forward.&thinsp; You can also browse the set of target [Packages](/packages) delivered with the latest **EM&bull;Script SDK**.&thinsp; And for those wanting OSS, endulge yourself at [GitHub](https://github.com/em-foundation).
+If you'd prefer to just "look around", check out the other sections of this site &ndash; which we'll continue to populate going forward.&thinsp; You can also browse the set of target [Packages](shelf/index.md) delivered with the latest **EM&bull;Script SDK**.&thinsp; And for those wanting OSS, endulge yourself at [GitHub](https://github.com/em-foundation).
 
 !!! question "7 &mdash; Tell me more about the longer-term roadmap for **EM&bull;Script**"
 
