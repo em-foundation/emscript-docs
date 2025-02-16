@@ -66,7 +66,7 @@ which then brings us then to **EM&bull;Script** &ndash; same approach, different
 
 1. see the [Stack Overflow Developer Survey](https://survey.stackoverflow.co/2024/)
 
-**EM&bull;Script** does in fact leverage many of the language services and compiler APIs delivered as part of TypeScript.&thinsp; As important, the later's robust type-system enables us to capture "the essence of EM" without leaving the confines of the TypeScript language.
+**EM&bull;Script** does in fact leverage many of the language services and compiler APIs delivered as part of TypeScript.&thinsp; As important, the latter's robust type-system enables us to capture "the essence of EM" without leaving the confines of the TypeScript language.
 
 But perhaps the strongest reason for choosing TypeScript comes down to this insight:
 
