@@ -3276,7 +3276,7 @@
 
 
 <h1 id="getting-started-with-emscript">Getting started with EM&bull;Script</h1>
-<p><strong>EM&bull;Script</strong> requires a cross-development environment comprising <em>hosted</em>&thinsp; software tools will compile and load executable programs onto <em>target</em>&thinsp; MCU hardware.&thinsp; For the host, you'll use a PC running <strong>Windows</strong>, <strong>Linux</strong>, or <strong>MacOS</strong>; for the target, you can choose any MCU board for which a corresponding <code class="language-ems"><span class="nb">em$distro</span></code> support package already exists.</p>
+<p><strong>EM&bull;Script</strong> requires a cross-development environment consisting of <em>hosted</em>&thinsp; software tools which will compile and load executable programs onto <em>target</em>&thinsp; MCU hardware.&thinsp; For the host, you can use a PC running <strong>Windows</strong>, <strong>Linux</strong>, or <strong>MacOS</strong>; for the target, you can choose any MCU board for which a corresponding <code class="language-ems"><span class="nb">em$distro</span></code> support package already exists.</p>
 <p>Before turning to the <strong>EM&bull;Script SDK</strong> (described next), you should first install or upgrade the following tooling environments on your host PC:</p>
 <table>
 <thead>
@@ -3302,7 +3302,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>If you don't already have a recent version of the <strong>Git Bash</strong> shell, you should also install <a href="https://gitforwindows.org/">Git for Windows</a>.&nbsp;  To verify your setup, ensure that the <code class="language-ems highlight"><span class="si">node</span></code> and <code class="language-ems highlight"><span class="si">code</span></code> commands from the previous table operate correctly under <strong>Git Bash</strong>. </p>
+<p>If you don't already have a recent version of the <strong>Git Bash</strong> shell, you should also install <a href="https://gitforwindows.org/">Git for Windows</a>.&nbsp;  To verify your setup, ensure that the <code class="language-ems highlight"><span class="si">node</span></code> and <code class="language-ems highlight"><span class="si">code</span></code> commands from the previous table operate correctly under <strong>Git Bash</strong>.</p>
 </div>
 </div>
 </div>
@@ -3310,30 +3310,45 @@
 <p class="admonition-title">Do <em>not</em> proceed forward if these verification checks should fail&thinsp;!!!</p>
 </div>
 <h2 id="software-development-kit">Software development kit</h2>
-<p>You can provision the latest <strong>EM&bull;Script SDK</strong> onto your host PC in three simple steps:</p>
-<p><span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> &nbsp; download a workspace pre-populated with packages of <strong>EM&bull;Script</strong> target-content<br>
-<span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> &nbsp; install <strong>EM&bull;Script</strong> host-tooling along with some 3<sup>rd</sup> party compilers and loaders<br>
-<span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> &nbsp; verify that you can build (and optionally run) a sample <strong>EM&bull;Script</strong> program</p>
-<p>Step <span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> relies upon the <code class="language-ems highlight"><span class="si">git</span></code> command to initially populate (and subsequently update) a special <code><span class="filename">emscript-sdk</span></code> folder on your host PC:</p>
+<p>You'll provision the latest <strong>EM&bull;Script SDK</strong> onto your host PC in three simple steps, each using the <strong>Node Package Manager</strong> <code class="language-ems highlight"><span class="si">npm</span></code> command delivered as of <strong>Node.js</strong>:</p>
+<p><span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> &nbsp; prepare a new folder, which we'll logically name <code><span class="filename">&laquo;emscript-sdk&raquo;</span></code> going forward<br>
+<span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> &nbsp; install <strong>SDK</strong> tooling and content, along with 3<sup>rd</sup> party compilers and loaders<br>
+<span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> &nbsp; verify you can build (and optionally run) a sample <strong>EM&bull;Script</strong> program</p>
+<p>Step <span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> uses the <code class="language-ems highlight"><span class="si">npm</span></code> command to initialize a newly-created <code><span class="filename">&laquo;emscript-sdk&raquo;</span></code> installation folder somewhere on your PC:</p>
 <div class="language-text highlight">
 <p><pre><code><span class="em-color-blue">[~]</span>
-$ <span class="em-color-orange">git clone https://github.com/em-foundation/emscript-sdk.git</span>
-$ <span class="em-color-orange">cd emscript-sdk</span>
+$ <span class="em-color-orange">mkdir emscript-sdk; cd emscript-sdk</span><br>
 <span class="em-color-blue">[~/emscript-sdk]</span>
-$ &#x25AE;</code></pre></p>
+$ <span class="em-color-orange">npm init -y</span>
+  ...<br>
+<span class="em-color-blue">[~/emscript-sdk]</span>
+$ &#9646;</code></pre></p>
 </div>
-<p>In general, you can maintain multiple <code><span class="filename">emscript-sdk</span></code> installations located anywhere on your PC &ndash; though we recommend starting with your <code class="language-ems highlight"><span class="si">$HOME</span></code> folder <code><span class="em-color-blue">[~]</span></code> as illustrated above.&thinsp;  Once inside <code><span class="filename">~/emscript-sdk</span></code>, you can use other <code class="language-ems highlight"><span class="si">git</span></code> sub-commands to upgrade your <strong>EM&bull;Script</strong> installation [<code class="language-ems highlight"><span class="si">git</span></code>&thinsp;<code class="language-ems highlight"><span class="si">pull</span></code>] as well as switch to particular tagged releases [<code class="language-ems highlight"><span class="si">git</span></code>&thinsp;<code class="language-ems highlight"><span class="si">checkout</span></code>&thinsp;<code class="language-ems highlight"><span class="si">v26.1.0</span></code>].</p>
-<p>Step <span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> uses the <strong>Node Package Manager</strong> <code class="language-ems highlight"><span class="si">npm</span></code> command to install tooling artifacts into your current <code><span class="filename">emscript-sdk</span></code> folder:</p>
+<p>For simplicity, we've elected to use <code><span class="filename">~/emscript-sdk</span></code> as our logical <code><span class="filename">&laquo;emscript-sdk&raquo;</span></code> folder.&thinsp; Feel free to name and locate this folder anywhere in the filesystem. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">You must also configure <code class="language-ems highlight"><span class="si">npm</span></code> to use <strong>Git Bash</strong> as its default shell</p>
+</div>
+<p><div markdown class="language-text highlight"><pre><code>$ <span class="em-color-orange">npm config set script-shell "c:/git/usr/bin/bash"</span></code></pre></div></p>
+</div>
+</div>
+</div>
+<p>Step <span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> uses the <code class="language-ems highlight"><span class="si">npm</span></code> command to populate your current <code><span class="filename">&laquo;emscript-sdk&raquo;</span></code> folder with tooling and content comprising the <strong>EM&bull;Script SDK</strong>:</p>
 <div class="language-text highlight">
-<p><pre><code><span class="em-color-blue">[~/emscript-sdk]</span>
-$ <span class="em-color-orange">npm clean-install</span></code></pre></p>
+<p><pre><code><span class="em-color-blue">[&laquo;emscript-sdk&raquo;]</span>
+$ <span class="em-color-orange">npm install @em-foundation/emscript-sdk</span>
+  ...
+added 11 packages, and audited 12 packages in 26s
+  ...</code></pre></p>
 </div>
-<p>Initial execution of this command will create the special <code><span class="filename">node_modules</span></code> sub-folder used by <strong>Node.js</strong> as well as a <code><span class="filename">tools</span></code> sub-folder used by <strong>EM&bull;Script</strong>.&thinsp; Use the <code class="language-ems highlight"><span class="si">npm</span></code>&thinsp;<code class="language-ems highlight"><span class="si">list</span></code> command to show the current set of installed packages, which should track the dependencies called out within the top-level <code><span class="filename">emscript-sdk/package.json</span></code> file.</p>
+<p>Use the <code class="language-ems highlight"><span class="si">npm list</span></code> command with its&thinsp;<code class="language-ems highlight"><span class="si">--depth=1</span></code> or&thinsp;<code class="language-ems highlight"><span class="si">--all</span></code> option for more information.</p>
 <p>Step <span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> finally verifies your <strong>EM&bull;Script</strong> installation by building a small program: </p>
 <div class="language-text highlight">
-<p><pre><code><span class="em-color-blue">[~/emscript-sdk]</span>
+<p><pre><code><span class="em-color-blue">[&laquo;emscript-sdk&raquo;]</span>
 $ <span class="em-color-orange">npm run verify-build</span><br>
-&gt; emscript-cli@26.0.1 verify-build
+&gt; emscript-cli@26.1.0 verify-build
 &gt; sh -c '(cd workspace; npx emscript-cli build --unit em.core/em.examples.basic/Ex02_BlinkerP.em.ts)'
 building ‘em.examples.basic/Ex02_BlinkerP’ ...
     using setup ‘ti.cc23xx://default’ with board ‘LP_EM_CC2340R5’
@@ -3342,63 +3357,56 @@ compiling ‘main.cpp’ ...
     image sha32: 1dc95979
     image size: text (1212) + const (12) + data (0) + bss (16)
 done in 1.80 seconds<br>
-<span class="em-color-blue">[~/emscript-sdk]</span>
+<span class="em-color-blue">[&laquo;emscript-sdk&raquo;]</span>
 $ &#x25AE;</code></pre></p>
 </div>
 <h2 id="target-mcu-hardware">Target MCU hardware</h2>
 <p>The <strong>SDK</strong> contains all tooling needed to compile and load <strong>EM&bull;Script</strong> programs targeting different MCU development boards.&thinsp;  While we encourage you to purchase one of these boards, you can still learn about <strong>EM&bull;Script</strong> by building (but not running) some sample programs.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">LP-EM-CC2340R5</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">LP-EM-CC2340R5</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The Texas Instruments <a href="https://www.ti.com/product/CC2340R5">CC2340R5</a> wireless MCU features an Arm Cortex-M0+ CPU together with a familiar suite of peripherals &ndash; including a generic 2.4&thinsp;GHz radio with BLE 5.x support.  Texas Instruments also offers an inexpensive <a href="https://www.ti.com/tool/LP-EM-CC2340R5">LP-EM-CC2340R5</a> evaluation board in their familiar <strong>LaunchPad</strong> format &ndash; available from TI as well as their distributors.</p>
-<p>You should also purchase this <a href="https://www.ti.com/tool/LP-XDS110ET">emulator board</a> from TI &ndash; unless you already own a "classic" TI LaunchPad with on-board XDS110 support.  In that case, you can easily connect a legacy LP to your new LP-EM-CC2340R5 board using a cable supplied by TI.&thinsp;  If you haven't used an XDS110 before, run the <code><span class="filename">emscript-sdk/tools/ti-uniflash/one_time_setup</span></code> script.</p>
-<p>We'll soon verify that your LP-EM-CC2340R5 hardware works in concert with the <strong>SDK</strong> by building and loading a sample <strong>EM&bull;Script</strong> program.</p>
+<p>You should also purchase this <a href="https://www.ti.com/tool/LP-XDS110ET">emulator board</a> from TI &ndash; unless you already own a "classic" TI LaunchPad with on-board XDS110 support.  In that case, you can easily connect a legacy LP to your new LP-EM-CC2340R5 board using a cable supplied by TI.&thinsp;  If you haven't used an XDS110 before, run the <code><span class="filename">&laquo;emscript-sdk&raquo;/tools/ti-uniflash/one_time_setup</span></code> script.</p>
+<p>We'll soon verify that your LP-EM-CC2340R5 hardware works in concert with the <strong>SDK</strong> by building <em>and</em>&thinsp; loading our sample <strong>EM&bull;Script</strong> program.</p>
 </div>
 </div>
 </div>
 <h2 id="vs-code-extension">VS Code extension</h2>
-<p>To flatten your learning curve, we strongly encourage use of our <strong>EM&bull;Script Extension</strong>, which you can install from the command-line prior to launching <strong>VS Code</strong>:</p>
+<p>To flatten your learning curve, we strongly encourage using our <strong>EM&bull;Script Extension</strong> which you can install by first launching <strong>VS Code</strong>:</p>
 <div class="language-text highlight">
-<p><pre><code><span class="em-color-blue">[~/emscript-sdk]</span>
-$ <span class="em-color-orange">code --install-extension emscript*.vsix</span><br>Installing extensions...
-Extension ‘emscript-26.0.1.202502091752.vsix’ was successfully installed.<br>
-<span class="em-color-blue">[~/emscript-sdk]</span>
+<p><pre><code><span class="em-color-blue">[&laquo;emscript-sdk&raquo;]</span>
 $ <span class="em-color-orange">code .</span></code></pre></p>
 </div>
-<p>If all goes well, you should see a top-level listing of the <code><span class="filename">~/emscript-sdk</span></code> folder together with a short notification that the <strong>EM&bull;Script Extension</strong> has activated.</p>
+<p>Once inside, you'll see a top-level listing of the <code><span class="filename">&laquo;emscript-sdk&raquo;</span></code> folder.&thinsp; From here, right-click on the <code><span class="filename">.vsix</span></code> file and select <strong>Install Extension VSIX</strong>:</p>
 <figure id="fig1">
 <p><a class="glightbox" href="../assets/fig-setup-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="../assets/fig-setup-1.png" /></a></p>
-<figcaption>Launching VS Code
+<figcaption>EM&bull;Script Extension Installation
 </figcaption>
 </figure>
-<p>You can learn more by navigating to the <strong>EXTENSIONS &gt; INSTALLED</strong> side-panel or else by visiting the <strong>EM&bull;Script</strong> page at the <a href="https://marketplace.visualstudio.com/items?itemName=the-em-foundation.emscript">VS Code Marketplace</a>.</p>
+<p>If all goes well, you should now see a clickable-item in the <strong>VS Code</strong> status bar which confirms the full version of the <strong>EM&bull;Script</strong> extension currently active.</p>
 <figure id="fig2">
 <p><a class="glightbox" href="../assets/fig-setup-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="../assets/fig-setup-2.png" /></a></p>
-<figcaption>Installed Extensions
+<figcaption>EM&bull;Script Extension Version
 </figcaption>
 </figure>
-<p>From here, you should drill-down into the <code><span class="filename">~/emscript-sdk/workspace</span></code> sub-folder and explore the software content which <strong>EM&bull;Script</strong> can build and load onto your target MCU hardware.</p>
+<p>From here, you can drill-down into the <code><span class="filename">&laquo;emscript-sdk&raquo;/workspace</span></code> sub-folder and explore the software content which <strong>EM&bull;Script</strong> can build and load onto your target MCU hardware.</p>
 <figure id="fig3">
 <p><a class="glightbox" href="../assets/fig-setup-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image info" src="../assets/fig-setup-3.png" /></a></p>
-<figcaption>Target Content
+<figcaption>EM&bull;Script Target Content
 </figcaption>
 </figure>
-<!--
-Our **Zig&bull;EM** extension supports features already familiar to VS Code users &ndash; syntax highlighting, code navigation, outline views, hover help, intellisense completion, and many more.
--->
-
+<p>Our <strong>EM&bull;Script</strong> extension supports features already familiar to <strong>VS Code</strong> users &ndash; syntax highlighting, code navigation, outline views, hover help, intellisense completion, and many more.</p>
 <h2 id="command-line">Command line</h2>
 <p>The <strong>SDK</strong> contains an <code class="language-ems highlight"><span class="si">emscript</span></code> command-line tool which compiles and loads programs for your target MCU hardware.&thinsp; Used internally by <code class="language-ems highlight"><span class="si">npm</span></code>&thinsp;<code class="language-ems highlight"><span class="si">run</span></code>&thinsp;<code class="language-ems highlight"><span class="si">verify-build</span></code> as part of installation step <span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span>, you can access the <code class="language-ems highlight"><span class="si">emscript</span></code> command directly from your PC's shell.</p>
-<p>You'll find the <code class="language-ems highlight"><span class="si">emscript</span></code> executable at <code><span class="filename">emscript-sdk/node_modules/.bin/emscript</span></code>;&thinsp; for convenience, amend your shell's <code class="language-ems highlight"><span class="si">$PATH</span></code> or else reference <code class="language-ems highlight"><span class="si">emscript</span></code> with a named link or alias:</p>
+<p>You'll find the <code class="language-ems highlight"><span class="si">emscript</span></code> executable in <code><span class="filename">&laquo;emscript-sdk&raquo;/node_modules/emscript-cli/bin/</span></code>.&thinsp; Add this folder to your <code class="language-ems highlight"><span class="si">$PATH</span></code> or else reference <code class="language-ems highlight"><span class="si">emscript</span></code> with a named link or alias.&thinsp; To verify:</p>
 <div class="language-text highlight">
-<p><pre><code>$ <span class="em-color-orange">alias emscript='~/emscript-sdk/node_modules/.bin/emscript'</span>
-$ <span class="em-color-orange">emscript --version</span>
-26.0.1.202502071929</code></pre></p>
+<p><pre><code>$ <span class="em-color-orange">emscript --version</span>
+26.1.0.202502161325</code></pre></p>
 </div>
-<p>The <code class="language-ems highlight"><span class="si">emscript</span></code>&thinsp;<code class="language-ems highlight"><span class="si">build</span></code> sub-command will serve as your primary entry-point when working with <strong>EM&bull;Script</strong>.&thinsp; Typically invoked inside the <code><span class="filename">emscript-sdk/workspace</span></code> sub-folder, let's now build the <em>same</em>&thinsp; target program used to verify SDK installation:</p>
+<p>The <code class="language-ems highlight"><span class="si">emscript</span></code>&thinsp;<code class="language-ems highlight"><span class="si">build</span></code> sub-command will serve as your primary entry-point when working with <strong>EM&bull;Script</strong>.&thinsp; Typically invoked inside the <code><span class="filename">&laquo;emscript-sdk&raquo;/workspace</span></code> sub-folder, let's now build the <em>same</em>&thinsp; target program used to verify the SDK installation:</p>
 <div class="language-text highlight">
-<p><pre><code><span class="em-color-blue">[~/emscript-sdk/workspace]</span>
-<span class=" em-color-orange">emscript build --unit em.core/em.examples.basic/Ex02_BlinkerP.em.ts</span>
+<p><pre><code><span class="em-color-blue">[&laquo;emscript-sdk&raquo;/workspace]</span>
+$ <span class=" em-color-orange">emscript build --unit em.core/em.examples.basic/Ex02_BlinkerP.em.ts</span>
 building ‘em.examples.basic/Ex02_BlinkerP’ ...
     using setup ‘ti.cc23xx://default’ with board ‘LP_EM_CC2340R5’
     executed ‘em$meta’ program, generated ‘main.cpp’ using [31/62] units in 0.90 seconds
@@ -3409,10 +3417,10 @@ done in 1.80 seconds</code></pre></p>
 </div>
 <p>To confirm operation of your target MCU hardware, simply append the <code class="language-ems highlight"><span class="si">--load</span></code> option to the same command:</p>
 <div class="language-text highlight">
-<p><pre><code><span class="em-color-blue">[~/emscript-sdk/workspace]</span>
-<span class=" em-color-orange">emscript build --unit em.core/em.examples.basic/Ex02_BlinkerP.em.ts --load</span>
+<p><pre><code><span class="em-color-blue">[&laquo;emscript-sdk&raquo;/workspace]</span>
+$ <span class=" em-color-orange">emscript build --unit em.core/em.examples.basic/Ex02_BlinkerP.em.ts --load</span>
 building ‘em.examples.basic/Ex02_BlinkerP’ ...
-    ...
+  ...
 done in 1.80 seconds
 loading ‘em.examples.basic/Ex02_BlinkerP’ ...
 done</code></pre></p>
