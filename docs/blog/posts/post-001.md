@@ -34,7 +34,7 @@ visit this site's [Home](../../index.md){ .em-link } page and read more about th
 
 download the latest version of the **EM&bull;Script SDK** and even blink some LEDs [see [Setup](../../setup/index.md){ .em-link }]  
 
-follow **The EM Foundation** on [GitHub](https://github.com/em-foundation) and [LinkedIn](https://www.linkedin.com/company/the-em-foundation) &ndash; and pass this information on to others
+follow **The EM Foundation** on [LinkedIn](https://www.linkedin.com/company/the-em-foundation) and [GitHub](https://github.com/em-foundation) &ndash; and pass this information on to others
 
 </div>
 

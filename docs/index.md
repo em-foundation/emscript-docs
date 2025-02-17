@@ -57,7 +57,7 @@ Some lessons learned from the **Zig&bull;EM** experience:
 
 </div>
 
-which then brings us then to **EM&bull;Script** &ndash; same approach, different language&thinsp;....
+... which finally brings us to **EM&bull;Script** &ndash; same approach, different language&thinsp;!!
 
 !!! question "3 &mdash; What makes TypeScript an ideal host"
 
@@ -68,11 +68,11 @@ which then brings us then to **EM&bull;Script** &ndash; same approach, different
 
 **EM&bull;Script** does in fact leverage many of the language services and compiler APIs delivered as part of TypeScript.&thinsp; As important, the latter's robust type-system enables us to capture "the essence of EM" without leaving the confines of the TypeScript language.
 
-But perhaps the strongest reason for choosing TypeScript comes down to this insight:
+But maybe the strongest reason for choosing TypeScript comes down to this paradox:
 
 !!! bulb "&ast;NOBODY&ast; regards TypeScript as a suitable language for programming resource-constrained MCUs&thinsp;!!"
 
-Opportunities abound.... Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the domain of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!
+Opportunities abound.... Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the world of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!
 
 ## Show and tell
 
@@ -219,7 +219,7 @@ support a broad(er) range of embedded MCUs and document how to create an {[cb]em
 
 offer lightweight connectivity frameworks built upon standard&thinsp;/&thinsp;proprietary wireless protocols
 
-explore the impact of ten-fold code-size reductions on novel MCU architectures based on **RISC-V**
+explore the impact of tenfold code-size reductions on novel MCU architectures based on **RISC-V**
 
 showcase **EM&bull;Script** through application development projects sponsored by **The EM Foundation**
 
