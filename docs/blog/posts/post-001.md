@@ -6,7 +6,7 @@ readtime: 1
 
 # (Re-)Introducing EM&thinsp;!!
 
-The journey continues....&thinsp; Going "back to the drawing-board", we've reworked the original [EM Programming Language](https://docs.emlang.openem.org/) into a novel  environment &ndash; which _quantitatively_&thinsp; improves embedded code performance as well as _qualitatively_&thinsp; elevates your embedded coding experience. 
+The journey continues....&thinsp; Back from the "drawing-board", we've now reworked the original [EM Programming Language](https://docs.emlang.openem.org/) into a novel  environment &ndash; _quantitatively_&thinsp; improving embedded code performance as well as _qualitatively_&thinsp; elevating your embedded coding experience. 
 
 
 <!-- more -->
@@ -30,9 +30,9 @@ But ultimately, you'll have to evaluate **EM&bull;Script** on your own terms &nd
 
 <div markdown class="em-ul em-ul-check">
 
-visit this site's [Home](../../index.md) page and read more about the what&thinsp;|&thinsp;why&thinsp;|&thinsp;how of **EM&bull;Script** 
+visit this site's [Home](../../index.md){ .em-link } page and read more about the what&thinsp;|&thinsp;why&thinsp;|&thinsp;how of **EM&bull;Script** 
 
-download the latest version of the **EM&bull;Script SDK** and even blink some LEDs [see [Setup](../../setup/index.md)]  
+download the latest version of the **EM&bull;Script SDK** and even blink some LEDs [see [Setup](../../setup/index.md){ .em-link }]  
 
 follow **The EM Foundation** on [GitHub](https://github.com/em-foundation) and [LinkedIn](https://www.linkedin.com/company/the-em-foundation) &ndash; and pass this information on to others
 

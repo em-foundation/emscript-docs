@@ -30,11 +30,11 @@ As important, just a handful of EM programmers have developed thousands of EM mo
 
 !!! question "2 &mdash; So why did you create **EM&bull;Script**"
 
-Promoting the EM SDK through [blog posts](https://blog.openem.org/) in early 2024 elicited a mixed bag of reactions &ndash; from _"cool, good luck"_&thinsp; to _"sorry, try again"_&thinsp;.&thinsp;  Despite evidence quantifying EM's performance advantage over C/C++, a new (and unknown&thinsp;!!) language does raise the acceptance bar.
+Promoting the EM SDK through [blog posts](https://blog.emlang.openem.org) in early 2024 elicited a mixed bag of reactions &ndash; from _"cool, good luck"_&thinsp; to _"sorry, try again"_&thinsp;.&thinsp;  Despite evidence quantifying EM's performance advantage over C/C++, a new (and unknown&thinsp;!!) language does raise the acceptance bar.
 
 Needless to say, the effort required to support a handful of developers pales in comparison to promoting, sustaining, and evolving an open-source EM language for the broad community of embedded programmers.&thinsp; This realization then led to a radical change of course.
 
-**Zig&bull;EM** &ndash; announced [here](https://blog.zigem.tech/post-001/) in 3Q24 &ndash; attacked the issue head-on by nominally grafting the novel concepts and constructs of EM onto _another_&thinsp; programming language.&thinsp;
+**Zig&bull;EM** &ndash; announced [here](https://zigem.openem.org/post-001/) in 3Q24 &ndash; attacked the issue head-on by nominally grafting the novel concepts and constructs of EM onto _another_&thinsp; programming language.&thinsp;
 
 !!! zig "A hidden gem"
     First released in early 2016, [Zig](https://ziglang.org/) also offers a "higher-level programming with higher-levels of performance" value proposition when compared with C/C++.&thinsp; Zig regularly earns high-marks when held up against other modern system programming languages like Go and Rust &ndash; both already targeting embedded MCUs.
@@ -155,7 +155,7 @@ While sourced as TypeScript, an efficient implementation of the {[cf]put} functi
 
 !!! info "Bear with us &ndash; we've purposely omitted the most critical phase of the **EM&bull;Script** program build-flow&thinsp;!!"
 
-Starting with a "top-level" program source file (eg, {[fn]Ex01_HelloP.em.ts}), the translator follows its {[ck]import} chain and generates a {[fn]main.cpp} program &ndash; adding other translated files through {[ck]#include} directives and implementing the special {[cb]em$run} function seen [here](#ex1) within {[cf]main}.
+Starting with a "top-level" program source file (eg, {[fn]Ex01_HelloP.em.ts}), the translator follows its {[ck]import} chain and generates a {[fn]main.cpp} program &ndash; adding other translated files through {[ck]#include} directives and implementing the special {[cb]em$run} function seen [here](#ex1){ .em-link } within {[cf]main}.
 
 Like EM before it, the **EM&bull;Script** build flow can leverage any compiler suite which supports the **C++14** standard.&thinsp; And who knows, maybe **EM&bull;Script** will someday support other target programming languages as well &ndash; including **Zig**. :wink:
 
@@ -200,14 +200,14 @@ With boundless resources on your host PC &ndash; and with all of **Node.js** ava
 
 !!! question "6 &mdash; Can I start exploring the **EM&bull;Script** environment"
 
-Absolutely &ndash; the [Setup](setup/index.md){ .em-line } section of this site will help you get started with our **EM&bull;Script SDK**.&thinsp; Once you've provisioned a compatible(1)host PC, you can cross-compile target applications using **EM&bull;Script** &ndash; either from the command-line or else within the **VS Code** environment.
+Absolutely &ndash; the [Setup](setup/index.md){ .em-link } section of this site will help you get started with our **EM&bull;Script SDK**.&thinsp; Once you've provisioned a compatible(1)host PC, you can cross-compile target applications using **EM&bull;Script** &ndash; either from the command-line or else within the **VS Code** environment.
 { .annotate }
 
 1. **Windows**, **Linux**, or **MacOS**
 
 While not required, we strongly encourage you to purchase a low-cost MCU development board currently supported by the **SDK**.&thinsp;  Nothing beats the joy of blinking those LEDs&thinsp;!!&thinsp; :joy:
 
-If you'd prefer to just "look around", check out the other sections of this site &ndash; which we'll continue to populate going forward.&thinsp; You can also browse the set of target [Packages](shelf/index.md) delivered with the latest **EM&bull;Script SDK**.&thinsp; And for those wanting OSS, endulge yourself at [GitHub](https://github.com/em-foundation).
+If you'd prefer to just "look around", check out the other sections of this site &ndash; which we'll continue to populate going forward.&thinsp; You can also browse the set of target [Packages](shelf/index.md){ .em-link } delivered with the latest **EM&bull;Script SDK**.&thinsp; And for those wanting OSS, endulge yourself at [GitHub](https://github.com/em-foundation).
 
 !!! question "7 &mdash; Tell me more about the longer-term roadmap for **EM&bull;Script**"
 
