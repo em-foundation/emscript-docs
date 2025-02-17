@@ -20,11 +20,11 @@ Before turning to the **EM&bull;Script SDK** (described next), you should first 
 
 You'll provision the latest **EM&bull;Script SDK** onto your host PC in three simple steps, each using the **Node Package Manager** {[sh]npm} command delivered as of **Node.js**:
 
-{[bx,1]} &nbsp; prepare a new folder, which we'll logically name {[fn]&laquo;emscript-sdk&raquo;} going forward<br>
-{[bx,2]} &nbsp; install **SDK** tooling and content, along with 3<sup>rd</sup> party compilers and loaders<br>
-{[bx,3]} &nbsp; verify you can build (and optionally run) a sample **EM&bull;Script** program
+{[bx,1]} &nbsp; prepare a new folder, which we'll logically name {[fn]&laquo;your-sdk&raquo;} going forward<br>
+{[bx,2]} &nbsp; install **SDK** tooling and content, plus some 3<sup>rd</sup> party compilers and loaders<br>
+{[bx,3]} &nbsp; verify that you can build (and optionally run) a sample **EM&bull;Script** program
 
-Step {[bx,1]} uses the {[sh]npm} command to initialize a newly-created {[fn]&laquo;emscript-sdk&raquo;} installation folder somewhere on your PC:
+Step {[bx,1]} uses the {[sh]npm} command to initialize a newly-created {[fn]&laquo;your-sdk&raquo;} installation folder somewhere on your PC:
 
 <div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][~]}
 $ {[sp,em-color-orange]mkdir emscript-sdk; cd emscript-sdk}<br>
@@ -34,7 +34,7 @@ $ {[sp,em-color-orange]npm init -y}
 {[sp,em-color-blue][~/emscript-sdk]}
 $ &#9646</code></pre></div>
 
-For simplicity, we've elected to use {[fn]~/emscript-sdk} as our logical {[fn]&laquo;emscript-sdk&raquo;} folder.&thinsp; Feel free to name and locate this folder anywhere in the filesystem. 
+For simplicity, we've elected to use {[fn]~/emscript-sdk} as our logical {[fn]&laquo;your-sdk&raquo;} folder.&thinsp; Feel free to name and locate this folder anywhere in the file system. 
 
 === "Windows"
 
@@ -43,9 +43,9 @@ For simplicity, we've elected to use {[fn]~/emscript-sdk} as our logical {[fn]&l
     <div markdown class="language-text highlight"><pre><code>$ {[sp,em-color-orange]npm config set script-shell "c:/git/usr/bin/bash"}</code></pre></div>
 
 
-Step {[bx,2]} uses the {[sh]npm} command to populate your current {[fn]&laquo;emscript-sdk&raquo;} folder with tooling and content comprising the **EM&bull;Script SDK**:
+Step {[bx,2]} uses the {[sh]npm} command to populate your current {[fn]&laquo;your-sdk&raquo;} folder with tooling and content comprising the **EM&bull;Script SDK**:
 
-<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;emscript-sdk&raquo;]}
+<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;your-sdk&raquo;]}
 $ {[sp,em-color-orange]npm install @em-foundation/emscript-sdk}
   ...
 added 11 packages, and audited 12 packages in 26s
@@ -55,7 +55,7 @@ Use the {[sh]npm list} command with its&thinsp;{[sh]--depth=1} or&thinsp;{[sh]--
 
 Step {[bx,3]} finally verifies your **EM&bull;Script** installation by building a small program: 
 
-<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;emscript-sdk&raquo;]}
+<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;your-sdk&raquo;]}
 $ {[sp,em-color-orange]npm run verify-build}<br>
 &gt; emscript-cli@26.1.0 verify-build
 &gt; sh -c '(cd workspace; npx emscript-cli build --unit em.core/em.examples.basic/Ex02_BlinkerP.em.ts)'
@@ -66,7 +66,7 @@ compiling ‘main.cpp’ ...
     image sha32: 1dc95979
     image size: text (1212) + const (12) + data (0) + bss (16)
 done in 1.80 seconds<br>
-{[sp,em-color-blue][&laquo;emscript-sdk&raquo;]}
+{[sp,em-color-blue][&laquo;your-sdk&raquo;]}
 $ &#x25AE</code></pre></div>
 
 ## Target MCU hardware
@@ -77,7 +77,7 @@ The **SDK** contains all tooling needed to compile and load **EM&bull;Script** p
 
     The Texas Instruments [CC2340R5](https://www.ti.com/product/CC2340R5) wireless MCU features an Arm Cortex-M0+ CPU together with a familiar suite of peripherals &ndash; including a generic 2.4&thinsp;GHz radio with BLE 5.x support.  Texas Instruments also offers an inexpensive [LP-EM-CC2340R5](https://www.ti.com/tool/LP-EM-CC2340R5) evaluation board in their familiar **LaunchPad** format &ndash; available from TI as well as their distributors.
 
-    You should also purchase this [emulator board](https://www.ti.com/tool/LP-XDS110ET) from TI &ndash; unless you already own a "classic" TI LaunchPad with on-board XDS110 support.  In that case, you can easily connect a legacy LP to your new LP-EM-CC2340R5 board using a cable supplied by TI.&thinsp;  If you haven't used an XDS110 before, run the {[fn]&laquo;emscript-sdk&raquo;/tools/ti-uniflash/one_time_setup} script.
+    You should also purchase this [emulator board](https://www.ti.com/tool/LP-XDS110ET) from TI &ndash; unless you already own a "classic" TI LaunchPad with on-board XDS110 support.  In that case, you can easily connect a legacy LP to your new LP-EM-CC2340R5 board using a cable supplied by TI.&thinsp;  If you haven't used an XDS110 before, run the {[fn]&laquo;your-sdk&raquo;/tools/ti-uniflash/one_time_setup} script.
 
     We'll soon verify that your LP-EM-CC2340R5 hardware works in concert with the **SDK** by building _and_&thinsp; loading our sample **EM&bull;Script** program.
     
@@ -85,10 +85,10 @@ The **SDK** contains all tooling needed to compile and load **EM&bull;Script** p
 
 To flatten your learning curve, we strongly encourage using our **EM&bull;Script Extension** which you can install by first launching **VS Code**:
 
-<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;emscript-sdk&raquo;]}
+<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;your-sdk&raquo;]}
 $ {[sp,em-color-orange]code .}</code></pre></div>
 
-Once inside, you'll see a top-level listing of the {[fn]&laquo;emscript-sdk&raquo;} folder.&thinsp; From here, right-click on the {[fn].vsix} file and select **Install Extension VSIX**:
+Once inside, you'll see a top-level listing of {[fn]&laquo;your-sdk&raquo;} folder.&thinsp; From here, right-click on the {[fn].vsix} file and select **Install Extension VSIX**:
 
 <figure markdown id="fig1">
 ![Image info](../assets/fig-setup-1.png)
@@ -102,7 +102,7 @@ If all goes well, you should now see a clickable-item in the **VS Code** status 
 <figcaption>EM&bull;Script Extension Version
 </figure>
 
-From here, you can drill-down into the {[fn]&laquo;emscript-sdk&raquo;/workspace} sub-folder and explore the software content which **EM&bull;Script** can build and load onto your target MCU hardware.
+From here, you can drill-down into the {[fn]&laquo;your-sdk&raquo;/workspace} sub-folder and explore the software content which **EM&bull;Script** can build and load onto your target MCU hardware.
 
 <figure markdown id="fig3">
 ![Image info](../assets/fig-setup-3.png)
@@ -115,14 +115,14 @@ Our **EM&bull;Script** extension supports features already familiar to **VS Code
 
 The **SDK** contains an {[sh]emscript} command-line tool which compiles and loads programs for your target MCU hardware.&thinsp; Used internally by {[sh]npm}&thinsp;{[sh]run}&thinsp;{[sh]verify-build} as part of installation step {[bx,3]}, you can access the {[sh]emscript} command directly from your PC's shell.
 
-You'll find the {[sh]emscript} executable in {[fn]&laquo;emscript-sdk&raquo;/node_modules/emscript-cli/bin/}.&thinsp; Add this folder to your {[sh]$PATH} or else reference {[sh]emscript} with a named link or alias.&thinsp; To verify:
+You'll find the {[sh]emscript} executable in {[fn]&laquo;your-sdk&raquo;/node_modules/emscript-cli/bin/}.&thinsp; Add this folder to your {[sh]$PATH} or else reference {[sh]emscript} with a named link or alias.&thinsp; To verify:
 
 <div markdown class="language-text highlight"><pre><code>$ {[sp,em-color-orange]emscript --version}
 26.1.0.202502161325</code></pre></div>
 
-The {[sh]emscript}&thinsp;{[sh]build} sub-command will serve as your primary entry-point when working with **EM&bull;Script**.&thinsp; Typically invoked inside the {[fn]&laquo;emscript-sdk&raquo;/workspace} sub-folder, let's now build the _same_&thinsp; target program used to verify the SDK installation:
+The {[sh]emscript}&thinsp;{[sh]build} sub-command will serve as your primary entry-point when working with **EM&bull;Script**.&thinsp; Typically invoked inside the {[fn]&laquo;your-sdk&raquo;/workspace} sub-folder, let's now build the _same_&thinsp; target program used to verify the SDK installation:
 
-<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;emscript-sdk&raquo;/workspace]}
+<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;your-sdk&raquo;/workspace]}
 $ {[sp, em-color-orange]emscript build --unit em.core/em.examples.basic/Ex02_BlinkerP.em.ts}
 building ‘em.examples.basic/Ex02_BlinkerP’ ...
     using setup ‘ti.cc23xx://default’ with board ‘LP_EM_CC2340R5’
@@ -134,7 +134,7 @@ done in 1.80 seconds</code></pre></div>
 
 To confirm operation of your target MCU hardware, simply append the {[sh]--load} option to the same command:
 
-<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;emscript-sdk&raquo;/workspace]}
+<div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;your-sdk&raquo;/workspace]}
 $ {[sp, em-color-orange]emscript build --unit em.core/em.examples.basic/Ex02_BlinkerP.em.ts --load}
 building ‘em.examples.basic/Ex02_BlinkerP’ ...
   ...

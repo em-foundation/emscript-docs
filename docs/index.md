@@ -219,7 +219,7 @@ support a broad(er) range of embedded MCUs and document how to create an {[cb]em
 
 offer lightweight connectivity frameworks built upon standard&thinsp;/&thinsp;proprietary wireless protocols
 
-explore the impact of 10&thinsp;X code-size reductions on novel MCU architectures based on **RISC-V**
+explore the impact of ten-fold code-size reductions on novel MCU architectures based on **RISC-V**
 
 showcase **EM&bull;Script** through application development projects sponsored by **The EM Foundation**
 
