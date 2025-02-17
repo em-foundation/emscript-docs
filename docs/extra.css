@@ -3,7 +3,7 @@
 @import url('extra-base.css');
 
 :root {
-    --md-primary-fg-color: hsl(175, 50%, 30%);
+    --md-primary-fg-color: hsl(175, 50%, 25%);
     --md-primary-bg-color: white;
     --md-typeset-a-color:  hsl(175, 80%, 40%) !important;
 }
