@@ -61,7 +61,7 @@
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-DX6RZ0VNPT"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-DX6RZ0VNPT",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-DX6RZ0VNPT",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-B2D564DJH3"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-B2D564DJH3",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-B2D564DJH3",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -3285,15 +3285,15 @@
 <div class="admonition question">
 <p class="admonition-title">1 &mdash; Refresh my memory of EM&thinsp;...</p>
 </div>
-<p>Since its inception in 2010, the focus of the <a href="https://docs.openem.org/">EM Programming Language</a> has remained constant &ndash; producing "tiny code for tiny chips" where every byte of memory and &mu;Joule of energy matters when deploying low-cost, low-power embedded systems.</p>
+<p>Since its inception in 2010, the focus of the <a href="https://docs.emlang.openem.org/">EM Programming Language</a> has remained constant &ndash; producing "tiny code for tiny chips" where every byte of memory and &mu;Joule of energy matters when deploying low-cost, low-power embedded systems.</p>
 <p>Having supported more than twenty 8/16/32-bit MCUs from a dozen silicon vendors, the EM language promises a <em>higher-level</em>&thinsp; programming paradigm coupled with a <em>higher-level</em>&thinsp; of runtime performance when compared with legacy C/C++ code targeting these MCUs.</p>
 <p>As important, just a handful of EM programmers have developed thousands of EM modules re-used across a broad range of high-volume (yet proprietary) IoT applications.&thinsp;  In late 2023, <a href="https://www.linkedin.com/company/the-em-foundation/?viewAsMember=true">The EM Foundation</a> &ndash; a 501(c)(3) non-profit &ndash; announced an openly available <strong>EM-SDK</strong>. </p>
 <div class="admonition question">
 <p class="admonition-title">2 &mdash; So why did you create <strong>EM&bull;Script</strong></p>
 </div>
-<p>Promoting the EM SDK through <a href="https://blog.openem.org/">blog posts</a> in early 2024 elicited a mixed bag of reactions &ndash; from <em>"cool, good luck"</em>&thinsp; to <em>"sorry, try again"</em>&thinsp;.&thinsp;  Despite evidence quantifying EM's performance advantage over C/C++, a new (and unknown&thinsp;!!) language does raise the acceptance bar.</p>
+<p>Promoting the EM SDK through <a href="https://blog.emlang.openem.org">blog posts</a> in early 2024 elicited a mixed bag of reactions &ndash; from <em>"cool, good luck"</em>&thinsp; to <em>"sorry, try again"</em>&thinsp;.&thinsp;  Despite evidence quantifying EM's performance advantage over C/C++, a new (and unknown&thinsp;!!) language does raise the acceptance bar.</p>
 <p>Needless to say, the effort required to support a handful of developers pales in comparison to promoting, sustaining, and evolving an open-source EM language for the broad community of embedded programmers.&thinsp; This realization then led to a radical change of course.</p>
-<p><strong>Zig&bull;EM</strong> &ndash; announced <a href="https://blog.zigem.tech/post-001/">here</a> in 3Q24 &ndash; attacked the issue head-on by nominally grafting the novel concepts and constructs of EM onto <em>another</em>&thinsp; programming language.&thinsp;</p>
+<p><strong>Zig&bull;EM</strong> &ndash; announced <a href="https://zigem.openem.org/post-001/">here</a> in 3Q24 &ndash; attacked the issue head-on by nominally grafting the novel concepts and constructs of EM onto <em>another</em>&thinsp; programming language.&thinsp;</p>
 <div class="admonition zig">
 <p class="admonition-title">A hidden gem</p>
 <p>First released in early 2016, <a href="https://ziglang.org/">Zig</a> also offers a "higher-level programming with higher-levels of performance" value proposition when compared with C/C++.&thinsp; Zig regularly earns high-marks when held up against other modern system programming languages like Go and Rust &ndash; both already targeting embedded MCUs.</p>
@@ -3307,7 +3307,7 @@
 <p><span class="em-color-orange">&#x25CF;&ensp;</span> a language combo need not compromise runtime performance [time, space, power] versus legacy EM</p>
 <p><span class="em-color-orange">&#x25CF;&ensp;</span> while code performance remains a top priority, the <em>quality</em>&thinsp; of the coding experience can't lag far behind</p>
 </div>
-<p>which then brings us then to <strong>EM&bull;Script</strong> &ndash; same approach, different language&thinsp;....</p>
+<p>... which finally brings us to <strong>EM&bull;Script</strong> &ndash; same approach, different language&thinsp;!!</p>
 <div class="admonition question">
 <p class="admonition-title">3 &mdash; What makes TypeScript an ideal host</p>
 </div>
@@ -3316,11 +3316,11 @@
 <li>see the <a href="https://survey.stackoverflow.co/2024/">Stack Overflow Developer Survey</a></li>
 </ol>
 <p><strong>EM&bull;Script</strong> does in fact leverage many of the language services and compiler APIs delivered as part of TypeScript.&thinsp; As important, the latter's robust type-system enables us to capture "the essence of EM" without leaving the confines of the TypeScript language.</p>
-<p>But perhaps the strongest reason for choosing TypeScript comes down to this insight:</p>
+<p>But maybe the strongest reason for choosing TypeScript comes down to this paradox:</p>
 <div class="admonition bulb">
 <p class="admonition-title">&ast;NOBODY&ast; regards TypeScript as a suitable language for programming resource-constrained MCUs&thinsp;!!</p>
 </div>
-<p>Opportunities abound.... Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the domain of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!</p>
+<p>Opportunities abound.... Unlike other modern programming languages that have "branched out" to target embedded MCUs [MicroPython, TinyGo, and others], TypeScript has never had a bridge into the world of low-cost, low-power embedded systems &ndash; until now, of course&thinsp;!!</p>
 <h2 id="show-and-tell">Show and tell</h2>
 <div class="admonition question">
 <p class="admonition-title">4 &mdash; Show me some <strong>EM&bull;Script</strong> source code</p>
@@ -3437,7 +3437,7 @@ While this module clearly interacts with typical MCU hardware &ndash; controllin
 <div class="admonition info">
 <p class="admonition-title">Bear with us &ndash; we've purposely omitted the most critical phase of the <strong>EM&bull;Script</strong> program build-flow&thinsp;!!</p>
 </div>
-<p>Starting with a "top-level" program source file (eg, <code><span class="filename">Ex01_HelloP.em.ts</span></code>), the translator follows its <code class="language-ems"><span class="k">import</span></code> chain and generates a <code><span class="filename">main.cpp</span></code> program &ndash; adding other translated files through <code class="language-ems"><span class="k">#include</span></code> directives and implementing the special <code class="language-ems"><span class="nb">em$run</span></code> function seen <a href="#ex1">here</a> within <code class="language-ems"><span class="nf">main</span></code>.</p>
+<p>Starting with a "top-level" program source file (eg, <code><span class="filename">Ex01_HelloP.em.ts</span></code>), the translator follows its <code class="language-ems"><span class="k">import</span></code> chain and generates a <code><span class="filename">main.cpp</span></code> program &ndash; adding other translated files through <code class="language-ems"><span class="k">#include</span></code> directives and implementing the special <code class="language-ems"><span class="nb">em$run</span></code> function seen <a class="em-link" href="#ex1">here</a> within <code class="language-ems"><span class="nf">main</span></code>.</p>
 <p>Like EM before it, the <strong>EM&bull;Script</strong> build flow can leverage any compiler suite which supports the <strong>C++14</strong> standard.&thinsp; And who knows, maybe <strong>EM&bull;Script</strong> will someday support other target programming languages as well &ndash; including <strong>Zig</strong>. <img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f609.svg" title=":wink:" /></p>
 <p class="annotate">With a self-contained <code><span class="filename">main.cpp</span></code> as its sole input, the downstream compiler can aggressively apply stock optimization techniques(1)&thinsp;to the <em>whole program</em>&thinsp; &ndash; yielding a smaller, more efficient <code><span class="filename">main.out</span></code> image.&thinsp; But the real power of <strong>EM&bull;Script</strong> lies in what happens upstream:</p>
 <ol>
@@ -3469,12 +3469,12 @@ While this module clearly interacts with typical MCU hardware &ndash; controllin
 <div class="admonition question">
 <p class="admonition-title">6 &mdash; Can I start exploring the <strong>EM&bull;Script</strong> environment</p>
 </div>
-<p class="annotate">Absolutely &ndash; the <a class="em-line" href="setup/">Setup</a> section of this site will help you get started with our <strong>EM&bull;Script SDK</strong>.&thinsp; Once you've provisioned a compatible(1)host PC, you can cross-compile target applications using <strong>EM&bull;Script</strong> &ndash; either from the command-line or else within the <strong>VS Code</strong> environment.</p>
+<p class="annotate">Absolutely &ndash; the <a class="em-link" href="setup/">Setup</a> section of this site will help you get started with our <strong>EM&bull;Script SDK</strong>.&thinsp; Once you've provisioned a compatible(1)host PC, you can cross-compile target applications using <strong>EM&bull;Script</strong> &ndash; either from the command-line or else within the <strong>VS Code</strong> environment.</p>
 <ol>
 <li><strong>Windows</strong>, <strong>Linux</strong>, or <strong>MacOS</strong></li>
 </ol>
 <p>While not required, we strongly encourage you to purchase a low-cost MCU development board currently supported by the <strong>SDK</strong>.&thinsp;  Nothing beats the joy of blinking those LEDs&thinsp;!!&thinsp; <img alt="😂" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f602.svg" title=":joy:" /></p>
-<p>If you'd prefer to just "look around", check out the other sections of this site &ndash; which we'll continue to populate going forward.&thinsp; You can also browse the set of target <a href="shelf/">Packages</a> delivered with the latest <strong>EM&bull;Script SDK</strong>.&thinsp; And for those wanting OSS, endulge yourself at <a href="https://github.com/em-foundation">GitHub</a>.</p>
+<p>If you'd prefer to just "look around", check out the other sections of this site &ndash; which we'll continue to populate going forward.&thinsp; You can also browse the set of target <a class="em-link" href="shelf/">Packages</a> delivered with the latest <strong>EM&bull;Script SDK</strong>.&thinsp; And for those wanting OSS, endulge yourself at <a href="https://github.com/em-foundation">GitHub</a>.</p>
 <div class="admonition question">
 <p class="admonition-title">7 &mdash; Tell me more about the longer-term roadmap for <strong>EM&bull;Script</strong></p>
 </div>
@@ -3482,7 +3482,7 @@ While this module clearly interacts with typical MCU hardware &ndash; controllin
 <div class="em-ul em-ul-check">
 <p>support a broad(er) range of embedded MCUs and document how to create an <code class="language-ems"><span class="nb">em$distro</span></code></p>
 <p>offer lightweight connectivity frameworks built upon standard&thinsp;/&thinsp;proprietary wireless protocols</p>
-<p>explore the impact of 10&thinsp;X code-size reductions on novel MCU architectures based on <strong>RISC-V</strong></p>
+<p>explore the impact of tenfold code-size reductions on novel MCU architectures based on <strong>RISC-V</strong></p>
 <p>showcase <strong>EM&bull;Script</strong> through application development projects sponsored by <strong>The EM Foundation</strong></p>
 </div>
 <p><strong>EM&bull;Script</strong> &ndash; <span class="em-color-logo">The embedded language for embedded programming</span></p>

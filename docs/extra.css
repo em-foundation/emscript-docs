@@ -9,8 +9,8 @@
 }
 
 :root {
-    --em-vers: "26.1.0";
-    --em-time: "202502161917";
+    --em-vers: "26.1.1";
+    --em-time: "202502180117";
 }
 
 [data-md-color-scheme="slate"] {
@@ -106,7 +106,7 @@ div.md-search {
 }
 
 div.md-search__inner::after {
-    content: 'version 'var(--em-vers)' \2014  [\2009 'var(--em-time)'\2009]';
+    content: 'Version 'var(--em-vers)' \2014  [\2009 'var(--em-time)'\2009]';
     font-size: 0.6rem;
     position: absolute;
     top: -26px;
