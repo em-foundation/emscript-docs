@@ -21,7 +21,7 @@ We've followed a very simple recipe in our latest flagship effort:
 
 Operating within the confines of **TypeScript** &ndash; and leveraging its world-class language support within **VS Code** &ndash; we've morphed a standalone **EM** language (used by just a handful of developers since 2010) into an **EM&bull;Script** environment accessible to the broader community.
 
-Following our inaugural  **EM&bull;Script SDK** release [{[sh]v26.1.0}], watch for revamped tutorials and articles coming available at this site &ndash; including updated **EM&bull;Mark** scores which measure program size, execution time, and overall energy efficiency of embedded applications.
+Following our inaugural  **EM&bull;Script SDK** release [{[sh]v26.1.x}], watch for revamped tutorials and articles coming available at this site &ndash; including updated **EM&bull;Mark** scores which measure program size, execution time, and overall energy efficiency of embedded applications.
 
 But ultimately, you'll have to evaluate **EM&bull;Script** on your own terms &ndash; so let's get started&thinsp;!!
 

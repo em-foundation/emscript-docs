@@ -22,7 +22,7 @@ Welcome (back) to **EM** [_ˈɛm_&thinsp;] &ndash; a programming environment whi
 
 !!! question "1 &mdash; Refresh my memory of EM&thinsp;..."
 
-Since its inception in 2010, the focus of the [EM Programming Language](https://docs.openem.org/) has remained constant &ndash; producing "tiny code for tiny chips" where every byte of memory and &mu;Joule of energy matters when deploying low-cost, low-power embedded systems.
+Since its inception in 2010, the focus of the [EM Programming Language](https://docs.emlang.openem.org/) has remained constant &ndash; producing "tiny code for tiny chips" where every byte of memory and &mu;Joule of energy matters when deploying low-cost, low-power embedded systems.
 
 Having supported more than twenty 8/16/32-bit MCUs from a dozen silicon vendors, the EM language promises a _higher-level_&thinsp; programming paradigm coupled with a _higher-level_&thinsp; of runtime performance when compared with legacy C/C++ code targeting these MCUs.
 

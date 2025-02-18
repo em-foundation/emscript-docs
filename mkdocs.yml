@@ -64,7 +64,7 @@ plugins:
 extra:
   analytics:
     provider: google
-    property: G-DX6RZ0VNPT
+    property: G-B2D564DJH3
 
   social:
     - icon: fontawesome/brands/linkedin
