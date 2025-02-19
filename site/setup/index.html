@@ -3299,15 +3299,18 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Do <em>not</em> proceed forward if these verification checks should fail&thinsp;!!!</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>If you don't already have a recent version of the <strong>Git Bash</strong> shell, you should also install <a href="https://gitforwindows.org/">Git for Windows</a>.&nbsp;  To verify your setup, ensure that the <code class="language-ems highlight"><span class="si">node</span></code> and <code class="language-ems highlight"><span class="si">code</span></code> commands from the previous table operate correctly under <strong>Git Bash</strong>.</p>
+<p>You must also configure <code class="language-ems highlight"><span class="si">npm</span></code> to use <strong>Git Bash</strong> as its default shell.&thinsp; The following command reflects the <em>default</em>&thinsp; installation directory for <strong>Git Bash</strong>:</p>
+<p><div markdown class="language-text highlight"><pre><code>$ <span class="em-color-orange">npm config set script-shell 'C:\Program Files\Git\usr\bin\bash'</span></code></pre></div></p>
+<p>Going forward, all command-line examples will presume your use of this shell.</p>
 </div>
 </div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Do <em>not</em> proceed forward if these verification checks should fail&thinsp;!!!</p>
 </div>
 <h2 id="software-development-kit">Software development kit</h2>
 <p>You'll provision the latest <strong>EM&bull;Script SDK</strong> onto your host PC in three simple steps, each using the <strong>Node Package Manager</strong> <code class="language-ems highlight"><span class="si">npm</span></code> command delivered as of <strong>Node.js</strong>:</p>
@@ -3325,16 +3328,6 @@ $ <span class="em-color-orange">npm init -y</span>
 $ &#9646;</code></pre></p>
 </div>
 <p>For simplicity, we've elected to use <code><span class="filename">~/emscript-sdk</span></code> as our logical <code><span class="filename">&laquo;your-sdk&raquo;</span></code> folder.&thinsp; Feel free to name and locate this folder anywhere in the file system. </p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="admonition warning">
-<p class="admonition-title">You must also configure <code class="language-ems highlight"><span class="si">npm</span></code> to use <strong>Git Bash</strong> as its default shell</p>
-</div>
-<p><div markdown class="language-text highlight"><pre><code>$ <span class="em-color-orange">npm config set script-shell "c:/git/usr/bin/bash"</span></code></pre></div></p>
-</div>
-</div>
-</div>
 <p>Step <span class="twemoji em-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/></svg></span> uses the <code class="language-ems highlight"><span class="si">npm</span></code> command to populate your current <code><span class="filename">&laquo;your-sdk&raquo;</span></code> folder with tooling and content comprising the <strong>EM&bull;Script SDK</strong>:</p>
 <div class="language-text highlight">
 <p><pre><code><span class="em-color-blue">[&laquo;your-sdk&raquo;]</span>
@@ -3362,7 +3355,7 @@ $ &#x25AE;</code></pre></p>
 </div>
 <h2 id="target-mcu-hardware">Target MCU hardware</h2>
 <p>The <strong>SDK</strong> contains all tooling needed to compile and load <strong>EM&bull;Script</strong> programs targeting different MCU development boards.&thinsp;  While we encourage you to purchase one of these boards, you can still learn about <strong>EM&bull;Script</strong> by building (but not running) some sample programs.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">LP-EM-CC2340R5</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">LP-EM-CC2340R5</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>The Texas Instruments <a href="https://www.ti.com/product/CC2340R5">CC2340R5</a> wireless MCU features an Arm Cortex-M0+ CPU together with a familiar suite of peripherals &ndash; including a generic 2.4&thinsp;GHz radio with BLE 5.x support.  Texas Instruments also offers an inexpensive <a href="https://www.ti.com/tool/LP-EM-CC2340R5">LP-EM-CC2340R5</a> evaluation board in their familiar <strong>LaunchPad</strong> format &ndash; available from TI as well as their distributors.</p>
@@ -3372,10 +3365,19 @@ $ &#x25AE;</code></pre></p>
 </div>
 </div>
 <h2 id="vs-code-extension">VS Code extension</h2>
-<p>To flatten your learning curve, we strongly encourage using our <strong>EM&bull;Script Extension</strong> which you can install by first launching <strong>VS Code</strong>:</p>
+<p>To flatten your learning curve, we strongly encourage using our <strong>EM&bull;Script Extension</strong> which you can install after launching <strong>VS Code</strong> from the command-line:</p>
 <div class="language-text highlight">
 <p><pre><code><span class="em-color-blue">[&laquo;your-sdk&raquo;]</span>
 $ <span class="em-color-orange">code .</span></code></pre></p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Our <strong>EM&bull;Script Extension</strong> currently requires that you launch <strong>VS Code</strong> from the <strong>Git Bash</strong> shell.</p>
+</div>
+</div>
+</div>
 </div>
 <p>Once inside, you'll see a top-level listing of <code><span class="filename">&laquo;your-sdk&raquo;</span></code> folder.&thinsp; From here, right-click on the <code><span class="filename">.vsix</span></code> file and select <strong>Install Extension VSIX</strong>:</p>
 <figure id="fig1">
