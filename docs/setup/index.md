@@ -9,11 +9,17 @@ Before turning to the **EM&bull;Script SDK** (described next), you should first 
 |[Node.js](https://nodejs.org/en/download)|version 18.0.0 or later| execute {[sh]node}&thinsp;{[sh]--version} to verify |
 |[VS Code](https://code.visualstudio.com/download)|version 1.90.0 or later| execute {[sh]code}&thinsp;{[sh]--version} to verify |
 
+!!! warning "Do _not_ proceed forward if these verification checks should fail&thinsp;!!!"
+
 === "Windows"
 
     If you don't already have a recent version of the **Git Bash** shell, you should also install [Git for Windows](https://gitforwindows.org/).&nbsp;  To verify your setup, ensure that the {[sh]node} and {[sh]code} commands from the previous table operate correctly under **Git Bash**.
 
-!!! warning "Do _not_ proceed forward if these verification checks should fail&thinsp;!!!"
+    You must also configure {[sh]npm} to use **Git Bash** as its default shell.&thinsp; The following command reflects the _default_&thinsp; installation directory for **Git Bash**:
+
+    <div markdown class="language-text highlight"><pre><code>$ {[sp,em-color-orange]npm config set script-shell 'C:\Program Files\Git\usr\bin\bash'}</code></pre></div>
+
+    Going forward, all command-line examples will presume your use of this shell.
 
 
 ## Software development kit
@@ -35,13 +41,6 @@ $ {[sp,em-color-orange]npm init -y}
 $ &#9646</code></pre></div>
 
 For simplicity, we've elected to use {[fn]~/emscript-sdk} as our logical {[fn]&laquo;your-sdk&raquo;} folder.&thinsp; Feel free to name and locate this folder anywhere in the file system. 
-
-=== "Windows"
-
-    !!! warning "You must also configure {[sh]npm} to use **Git Bash** as its default shell"
-
-    <div markdown class="language-text highlight"><pre><code>$ {[sp,em-color-orange]npm config set script-shell "c:/git/usr/bin/bash"}</code></pre></div>
-
 
 Step {[bx,2]} uses the {[sh]npm} command to populate your current {[fn]&laquo;your-sdk&raquo;} folder with tooling and content comprising the **EM&bull;Script SDK**:
 
