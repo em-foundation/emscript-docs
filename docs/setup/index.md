@@ -82,10 +82,15 @@ The **SDK** contains all tooling needed to compile and load **EM&bull;Script** p
     
 ## VS Code extension
 
-To flatten your learning curve, we strongly encourage using our **EM&bull;Script Extension** which you can install by first launching **VS Code**:
+To flatten your learning curve, we strongly encourage using our **EM&bull;Script Extension** which you can install after launching **VS Code** from the command-line:
 
 <div markdown class="language-text highlight"><pre><code>{[sp,em-color-blue][&laquo;your-sdk&raquo;]}
 $ {[sp,em-color-orange]code .}</code></pre></div>
+
+=== "Windows"
+
+    !!! warning "Our **EM&bull;Script Extension** currently requires that you launch **VS Code** from the **Git Bash** shell."
+
 
 Once inside, you'll see a top-level listing of {[fn]&laquo;your-sdk&raquo;} folder.&thinsp; From here, right-click on the {[fn].vsix} file and select **Install Extension VSIX**:
 
