@@ -107,8 +107,8 @@ export const $U = em.$declare('MODULE')
 import * as Common#u from '@em.mcu/Common.em'
 import * as GpioI#u from '@em.hal/GpioI.em'
 
-export const baud_rate = $config<u32>(9_600)
 export const TxPin = $proxy<GpioI#u.$I>()
+export const baud_rate = $config<u32>(9_600)
 
 const bit_time = $config<u16>()
 
@@ -127,7 +127,7 @@ export function put#f(data: u8): void {
     const bit_cnt = 10
     var tx_byte: u16 = (data << 1) | 0x600
     const key = Common#u.GlobalInterrupts.$$.disable#f()
-    for (let i = 0; i < bit_cnt; i++) {
+    for (const _ of $range(bit_cnt)) {
         Common#u.UsCounter.$$.set#f(bit_time.$$)
         if (tx_byte & 0x1) {
             TxPin.$$.set#f()
@@ -195,6 +195,16 @@ Our configuration phase in fact serves as a _staging area_&thinsp; where the who
 !!! bulb "As such, **EM&bull;Script** serves as its own _meta-language_&thinsp; used for build-time _meta-programming_&thinsp;."
 
 With boundless resources on your host PC &ndash; and with all of **Node.js** available to the {[fn]main.js} meta-program &ndash; opportunities abound for individual modules to encapsulate application-centric logic that ultimately shapes program images targeting resource-constrained MCUs.
+
+!!! ts "For those with deep[er] knowledge of **TypeScript**&thinsp;..."
+
+    Embedding the original **EM** language within the confines of **TypeScript** can sometimes become a delicate balancing act.&thinsp; To ensure we don't mask critical concepts and constructs which lie at the heart of **EM**, we'll sometimes must compromise on certain "best practices" embraced by modern **TypeScript** developers.(1)
+    { .annotate }
+
+    1. use of {[ck]namespace} and {[ck]var}, for example
+
+    Rest assured, we'll identify and rationalize these "pragmatic exceptions" as we learn more about embedded programming using the **EM&bull;Script** language.&thinsp;  In reality, the majority of targeted **EM&bull;Script** users &ndash; embedded developers coming from C &ndash; will have little/no prior experience with **TypeScript**.
+
 
 ## Next steps
 

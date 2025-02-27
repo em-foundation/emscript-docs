@@ -9,8 +9,8 @@
 }
 
 :root {
-    --em-vers: "26.1.1";
-    --em-time: "202502180117";
+    --em-vers: "26.2.1";
+    --em-time: "202502201834";
 }
 
 [data-md-color-scheme="slate"] {
@@ -402,6 +402,7 @@ span.em-screen {
     --md-admonition-icon--em: url(assets/file_type_emunit.svg);
     --md-admonition-icon--engr: url(assets/material-engr.svg);
     --md-admonition-icon--tools: url(assets/material-tools.svg);
+    --md-admonition-icon--ts: url(assets/ts-logo.png);
     --md-admonition-icon--zig: url(assets/zig-mark.svg);
 }
 
@@ -463,6 +464,22 @@ span.em-screen {
     background-color: hsl(30, 100%, 60%);
     -webkit-mask-image: var(--md-admonition-icon--tools);
         mask-image: var(--md-admonition-icon--tools);
+}
+
+.md-typeset .admonition.ts,
+.md-typeset details.ts {
+    border-color: hsl(211, 85%, 70%);
+}
+.md-typeset .ts > .admonition-title,
+.md-typeset .ts > summary {
+    background-color: hsla(211,60%,50%,0.1);
+}
+.md-typeset .ts > .admonition-title::before,
+
+.md-typeset .ts > summary::before {
+    background-color: hsl(211, 85%, 70%);
+    -webkit-mask-image: var(--md-admonition-icon--ts);
+    mask-image: var(--md-admonition-icon--ts);
 }
 
 .md-typeset .admonition.zig,
