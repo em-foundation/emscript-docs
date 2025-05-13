@@ -4,4 +4,4 @@
     console.log(`len = ${body.classList.length}`)
 </script>
 
-# Zig&bull;EM packages
+# EM&bull;Script packages
