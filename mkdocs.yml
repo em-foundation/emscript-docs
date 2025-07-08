@@ -92,38 +92,11 @@ nav:
         - shelf/em.core/em.arch.arm/index.md
         - GlobalInterrupts: shelf/em.core/em.arch.arm/GlobalInterrupts.md
         - IntrVec: shelf/em.core/em.arch.arm/IntrVec.md
+        - IsrDebug: shelf/em.core/em.arch.arm/IsrDebug.md
+        - IsrEmpty: shelf/em.core/em.arch.arm/IsrEmpty.md
+        - IsrI: shelf/em.core/em.arch.arm/IsrI.md
         - StartupC: shelf/em.core/em.arch.arm/StartupC.md
         - UsCounterSystick: shelf/em.core/em.arch.arm/UsCounterSystick.md
-      - em.bench.coremark:
-        - shelf/em.core/em.bench.coremark/index.md
-        - ActiveRunnerP: shelf/em.core/em.bench.coremark/ActiveRunnerP.md
-        - BenchAlgI: shelf/em.core/em.bench.coremark/BenchAlgI.md
-        - CoreBench: shelf/em.core/em.bench.coremark/CoreBench.md
-        - Crc: shelf/em.core/em.bench.coremark/Crc.md
-        - ListBench: shelf/em.core/em.bench.coremark/ListBench.md
-        - MatrixBench: shelf/em.core/em.bench.coremark/MatrixBench.md
-        - SleepyRunnerP: shelf/em.core/em.bench.coremark/SleepyRunnerP.md
-        - StateBench: shelf/em.core/em.bench.coremark/StateBench.md
-        - Utils: shelf/em.core/em.bench.coremark/Utils.md
-      - em.examples.basic:
-        - shelf/em.core/em.examples.basic/index.md
-        - Ex00_EmptyP: shelf/em.core/em.examples.basic/Ex00_EmptyP.md
-        - Ex01_HelloP: shelf/em.core/em.examples.basic/Ex01_HelloP.md
-        - Ex02_BlinkerP: shelf/em.core/em.examples.basic/Ex02_BlinkerP.md
-        - Ex03_DebugP: shelf/em.core/em.examples.basic/Ex03_DebugP.md
-        - Ex04_FiberP: shelf/em.core/em.examples.basic/Ex04_FiberP.md
-        - Ex05_Button1P: shelf/em.core/em.examples.basic/Ex05_Button1P.md
-        - Ex06_Button2P: shelf/em.core/em.examples.basic/Ex06_Button2P.md
-        - Ex07_Button3P: shelf/em.core/em.examples.basic/Ex07_Button3P.md
-        - Ex08_OneShot1P: shelf/em.core/em.examples.basic/Ex08_OneShot1P.md
-        - Ex09_OneShot2P: shelf/em.core/em.examples.basic/Ex09_OneShot2P.md
-        - Ex10_PollerP: shelf/em.core/em.examples.basic/Ex10_PollerP.md
-        - Ex11_Alarm1P: shelf/em.core/em.examples.basic/Ex11_Alarm1P.md
-        - Ex12_Alarm2P: shelf/em.core/em.examples.basic/Ex12_Alarm2P.md
-        - Ex13_TickerP: shelf/em.core/em.examples.basic/Ex13_TickerP.md
-      - em.examples.combo:
-        - shelf/em.core/em.examples.combo/index.md
-        - Ex01_TickerP: shelf/em.core/em.examples.combo/Ex01_TickerP.md
       - em.hal:
         - shelf/em.core/em.hal/index.md
         - BusyWaitI: shelf/em.core/em.hal/BusyWaitI.md
@@ -136,9 +109,11 @@ nav:
         - LedI: shelf/em.core/em.hal/LedI.md
         - McuI: shelf/em.core/em.hal/McuI.md
         - OneShotI: shelf/em.core/em.hal/OneShotI.md
+        - OneShotN: shelf/em.core/em.hal/OneShotN.md
+        - RtcI: shelf/em.core/em.hal/RtcI.md
         - UptimerI: shelf/em.core/em.hal/UptimerI.md
+        - UptimerN: shelf/em.core/em.hal/UptimerN.md
         - UsCounterI: shelf/em.core/em.hal/UsCounterI.md
-        - WakeupTimerI: shelf/em.core/em.hal/WakeupTimerI.md
       - em.lang:
         - shelf/em.core/em.lang/index.md
         - Console: shelf/em.core/em.lang/Console.md
@@ -152,12 +127,14 @@ nav:
         - shelf/em.core/em.utils/index.md
         - AlarmMgr: shelf/em.core/em.utils/AlarmMgr.md
         - BoardController: shelf/em.core/em.utils/BoardController.md
+        - BusyWait: shelf/em.core/em.utils/BusyWait.md
         - ButtonT: shelf/em.core/em.utils/ButtonT.md
         - FiberMgr: shelf/em.core/em.utils/FiberMgr.md
         - LedT: shelf/em.core/em.utils/LedT.md
         - SoftUart: shelf/em.core/em.utils/SoftUart.md
         - TickerMgr: shelf/em.core/em.utils/TickerMgr.md
         - TimeTypes: shelf/em.core/em.utils/TimeTypes.md
+        - UptimerRtc: shelf/em.core/em.utils/UptimerRtc.md
 #-- ti.cc23xx
     - ti.cc23xx:
       - shelf/ti.cc23xx/index.md

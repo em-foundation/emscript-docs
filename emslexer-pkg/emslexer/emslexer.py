@@ -5,7 +5,7 @@ import sys
 def printf(fmt, *args):
     sys.stderr.write(fmt % args)
 
-ID = r'([A-Za-z_][A-Za-z0-9_$]*)'
+ID = r'([A-Za-z_][A-Za-z0-9]*)'
 
 S = r'((")((\\")|[^"])*("))'
 
@@ -24,7 +24,7 @@ W_RESERVED = words((
     'class', 'const', 'declare', 'extends', 'function', 'interface', 'let', 'namespace', 'type', 'var'), suffix=r'\b')
 
 W_TYPES = words((
-    'arg_t, bool_t', 'i8', 'i16', 'i32', 'text_t', 'u8', 'u16', 'u32' 'void'), suffix=r'\b')
+    'arg_t', 'bool_t', 'i8', 'i16', 'i32', 'text_t', 'u8', 'u16', 'u32', 'void'), suffix=r'\b')
 
 class EmsLexer(RegexLexer):
 
@@ -44,6 +44,7 @@ class EmsLexer(RegexLexer):
     filenames = ['*.em.ts']
     tokens = {
         'root': [
+            (r'//\>.*?$', Name.Class),
             (r'//.*?$', Comment.Single),
             (r'\\\\.*?$', String.Interpol),
             (r'^\s+\|->.*?$', String.Interpol),
@@ -57,8 +58,9 @@ class EmsLexer(RegexLexer):
             (W_KEYWORDS, Keyword),
             (W_RESERVED, Keyword.Reserved),
             (W_TYPES, Keyword.Type),
+            (rf'\$\${ID}\b', Name.Class),
+            (rf'\$\$\b', Other),
             (rf'(em)?[$]{ID}\b', Name.Builtin),
-            (r'[iu]\d+', Keyword.Type),
             (rf'{ID}([#][a-z])?', semantic_callback),
             (rf'([@]{S})([#][a-z])?', semantic_callback),
             (r"(')((\\')|[^'])*(')", String),
