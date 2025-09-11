@@ -77,13 +77,13 @@ nav:
     - index.md
   - Setup:
     - setup/index.md
-  - Tutorials:
+  - Language Overview:
     - tutorials/index.md
-  - Articles:
+  - Core Runtime:
     - articles/index.md
-  - Blog: 
-      - blog/index.md
-  - Packages:
+  - Blog:
+    - blog/index.md
+  - Packages: 
     - shelf/index.md
 #-- em.core
     - em.core:

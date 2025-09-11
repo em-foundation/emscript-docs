@@ -114,9 +114,11 @@ const bit_time = $config<u16>()
 
 export namespace em$meta {
     export function em$construct() {
-        bit_time.$$ = Math.floor(1_000_000 / baud_rate.$$)
+        bit_time.$$val = Math.floor(1_000_000 / baud_rate.$$)
     }
 }
+
+//>> ---- em$targ ---- <<//
 
 export function em$startup(): void {
     TxPin.$$.makeOutput#f()
